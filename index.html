@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ملف إنجازات الجودة — نجاح العملاء | رِواء</title>
+<meta name="description" content="Quality establishment, coaching, onboarding, knowledge base, automation and knowledge transfer for Rewaa's Customer Success team — Fidaa Yousef AbuShunnar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Syne:wght@500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07061a;--card:rgba(22,19,64,.55);--line:rgba(255,255,255,.08);
+  --text:#ecebff;--muted:#a6a5cc;
+  --indigo:#5b4bff;--pink:#ff3d9a;--cyan:#22e3ff;--amber:#ffb627;--green:#2dff9a;
+  --grad:linear-gradient(90deg,var(--indigo),var(--pink),var(--cyan),var(--amber));
+  --radius:18px;
+  --fh:'Syne','Tajawal',sans-serif;--fb:'DM Sans','Tajawal',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden;scrollbar-color:var(--indigo) var(--bg);scrollbar-width:thin}
+body{background:radial-gradient(1200px 700px at 80% -10%,#1d1660 0%,transparent 60%),radial-gradient(900px 600px at -10% 40%,#2a0d3f 0%,transparent 60%),var(--bg);
+  color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.75;overflow-x:hidden;cursor:none}
+html[dir=rtl] body{font-family:'Tajawal','DM Sans',sans-serif}
+html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] h3,html[dir=rtl] h4,html[dir=rtl] .hero-kicker,html[dir=rtl] .day .d,html[dir=rtl] .gap-card .k,html[dir=rtl] .signature,html[dir=rtl] .logo{font-family:'Tajawal','Syne',sans-serif}
+.stack span,.badge{direction:ltr;unicode-bidi:isolate}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--fh);line-height:1.2}
+::selection{background:var(--pink);color:#fff}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--indigo),var(--pink));border-radius:10px;border:2px solid var(--bg)}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none}
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%}
+.cursor-dot{width:8px;height:8px;background:var(--cyan);box-shadow:0 0 12px var(--cyan),0 0 24px var(--cyan)}
+.cursor-ring{width:38px;height:38px;border:1.5px solid rgba(255,61,154,.7);box-shadow:0 0 18px rgba(255,61,154,.35);transition:width .25s,height .25s,border-color .25s,background .25s}
+.cursor-ring.hover{width:62px;height:62px;border-color:var(--amber);background:rgba(255,182,39,.08)}
+@media (hover:none),(pointer:coarse){body{cursor:auto}.cursor-dot,.cursor-ring{display:none}}
+
+#loader{position:fixed;inset:0;z-index:10000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transition:opacity .8s,visibility .8s}
+#loader.hide{opacity:0;visibility:hidden}
+.loader-initials{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(64px,12vw,120px);background:var(--grad);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 2.5s linear infinite}
+.loader-bar{width:min(280px,70vw);height:4px;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden}
+.loader-bar span{display:block;height:100%;width:0;background:var(--grad);background-size:200% 100%;animation:load 1.9s ease forwards,shimmer 1.2s linear infinite}
+.loader-text{font-size:13px;letter-spacing:2px;color:var(--muted)}
+@keyframes load{to{width:100%}}
+@keyframes shimmer{from{background-position:0% 50%}to{background-position:250% 50%}}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 4vw;
+  background:rgba(10,8,34,.6);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--line);
+  transform:translateY(-110%);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+nav.show{transform:translateY(0)}
+.logo{font-family:var(--fh);font-weight:800;font-size:18px;white-space:nowrap}
+.logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:22px;list-style:none}
+.nav-links a{position:relative;font-size:14px;color:var(--muted);transition:color .3s;padding:4px 0;white-space:nowrap}
+.nav-links a::after{content:'';position:absolute;inset-inline-start:0;bottom:-2px;height:2px;width:100%;background:var(--grad);transform:scaleX(0);transform-origin:right;transition:transform .35s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang-btn{font-family:var(--fb);font-weight:700;font-size:13px;color:var(--text);background:rgba(34,227,255,.08);border:1px solid rgba(34,227,255,.4);padding:7px 14px;border-radius:30px;cursor:none;transition:background .3s,box-shadow .3s}
+.lang-btn:hover{background:rgba(34,227,255,.18);box-shadow:0 0 18px -4px var(--cyan)}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:24px;cursor:none}
+
+main{position:relative;z-index:3;overflow-x:clip}
+section{padding:100px 5vw;max-width:1280px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;font-weight:700}
+.eyebrow::before{content:'';width:28px;height:2px;background:var(--grad)}
+.section-title{font-size:clamp(30px,4.4vw,52px);font-weight:800;margin-bottom:14px}
+.section-title span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.section-sub{color:var(--muted);max-width:760px;margin-bottom:48px;font-size:16.5px}
+.sub-h{font-family:var(--fh);font-size:22px;margin:56px 0 20px;display:flex;align-items:center;gap:12px}
+.sub-h i{font-style:normal;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:18px;background:linear-gradient(135deg,rgba(91,75,255,.35),rgba(255,61,154,.25))}
+html[dir=ltr] .section-title,html[dir=ltr] .hero-name{letter-spacing:-1px}
+html[dir=ltr] .hero-name{font-size:clamp(30px,3.7vw,52px)}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center;gap:56px;padding-top:130px}
+.tag{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:40px;border:1px solid rgba(34,227,255,.35);background:rgba(34,227,255,.07);font-size:13.5px;color:var(--cyan);margin-bottom:24px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulseDot 1.8s infinite}
+@keyframes pulseDot{0%{box-shadow:0 0 0 0 rgba(45,255,154,.7)}70%{box-shadow:0 0 0 10px rgba(45,255,154,0)}100%{box-shadow:0 0 0 0 rgba(45,255,154,0)}}
+.hero-kicker{font-family:var(--fh);font-size:clamp(16px,1.6vw,20px);color:#cfcdfa;margin-bottom:10px;font-weight:700}
+.hero-name{font-size:clamp(34px,4.6vw,66px);font-weight:800;margin-bottom:18px;line-height:1.15}
+.shimmer{background:linear-gradient(110deg,#fff 0%,var(--cyan) 20%,var(--indigo) 40%,var(--pink) 60%,var(--amber) 80%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 5s linear infinite}
+.hero-desc{color:var(--muted);max-width:600px;margin-bottom:32px;font-size:16.5px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:50px;font-weight:700;font-size:15px;transition:transform .3s,box-shadow .3s;cursor:none}
+.btn-primary{background:linear-gradient(90deg,var(--indigo),var(--pink));color:#fff;box-shadow:0 10px 30px -10px var(--pink)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px -10px var(--pink)}
+.btn-ghost{border:1px solid rgba(255,255,255,.2)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center;perspective:1200px;min-height:500px;min-width:0}
+.orb{position:absolute;width:400px;height:400px;max-width:100%;border-radius:50%;background:radial-gradient(circle,rgba(255,61,154,.55),rgba(91,75,255,.35) 45%,transparent 70%);filter:blur(40px);animation:orb 8s ease-in-out infinite}
+@keyframes orb{0%,100%{transform:scale(1)}50%{transform:scale(1.15) translate(20px,-20px)}}
+.card3d{position:relative;width:min(340px,100%);padding:36px 26px 26px;border-radius:26px;background:linear-gradient(160deg,rgba(40,33,110,.88),rgba(18,14,56,.92));border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.8);transform-style:preserve-3d;animation:float3d 9s ease-in-out infinite;text-align:center}
+@keyframes float3d{0%,100%{transform:rotateY(-14deg) rotateX(8deg) translateY(0)}25%{transform:rotateY(10deg) rotateX(-4deg) translateY(-14px)}50%{transform:rotateY(16deg) rotateX(6deg)}75%{transform:rotateY(-6deg) rotateX(-8deg) translateY(-12px)}}
+.card3d::before{content:'';position:absolute;inset:-1px;border-radius:26px;padding:1px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.6}
+.avatar-wrap{position:relative;width:140px;height:140px;margin:0 auto 20px}
+.avatar-ring{position:absolute;inset:-14px;border-radius:50%;border:2px dashed rgba(34,227,255,.6);animation:spin 14s linear infinite}
+.avatar-ring.r2{inset:-26px;border-color:rgba(255,182,39,.35);border-style:dotted;animation-direction:reverse;animation-duration:22s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;font-family:'Syne',sans-serif;font-weight:800;font-size:50px;color:#fff;background:linear-gradient(135deg,var(--indigo),var(--pink) 60%,var(--amber));box-shadow:0 0 40px rgba(255,61,154,.45)}
+.card3d h3{font-size:20px;margin-bottom:4px}
+.card3d .role{font-size:13px;color:var(--muted);margin-bottom:20px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{padding:12px 4px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.stat b{display:block;font-family:'Syne',sans-serif;font-size:24px;font-weight:800}
+.stat:nth-child(1) b{color:var(--cyan)}.stat:nth-child(2) b{color:var(--pink)}.stat:nth-child(3) b{color:var(--amber)}
+.stat small{font-size:11.5px;color:var(--muted);line-height:1.35;display:block;margin-top:4px}
+
+/* MARQUEE */
+.marquee{position:relative;z-index:3;overflow:hidden;border-block:1px solid var(--line);background:rgba(13,11,43,.6);padding:20px 0;direction:ltr;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 45s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-item{display:flex;align-items:center;gap:12px;padding:0 30px;font-family:'Syne','Tajawal',sans-serif;font-weight:700;font-size:clamp(17px,2.2vw,26px);white-space:nowrap;color:#d7d5ff}
+.marquee-item::after{content:'✦';color:var(--pink);font-size:15px;margin-left:30px}
+.marquee-item em{font-style:normal;font-family:var(--fb);font-weight:400;font-size:13px;color:var(--muted)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* COUNTERS */
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.counter{padding:24px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line)}
+.counter .n{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;direction:ltr;display:inline-block}
+.counter p{color:var(--muted);font-size:14.5px}
+
+/* PHASE TIMELINE */
+.timeline{position:relative;padding-inline-start:44px}
+.timeline::before{content:'';position:absolute;inset-inline-start:10px;top:0;bottom:0;width:3px;border-radius:3px;background:linear-gradient(180deg,var(--indigo),var(--pink),var(--cyan),var(--amber),var(--indigo));background-size:100% 300%;animation:flowY 6s linear infinite}
+@keyframes flowY{to{background-position:0 300%}}
+.tcard{position:relative;margin-bottom:24px;padding:24px 26px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s,border-color .4s}
+.tcard::before{content:'';position:absolute;inset-inline-start:-41px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--pink);box-shadow:0 0 14px var(--pink)}
+html[dir=rtl] .tcard:hover{transform:translateX(-12px)}
+html[dir=ltr] .tcard:hover{transform:translateX(12px)}
+.tcard:hover{border-color:rgba(255,61,154,.4);box-shadow:0 20px 50px -20px rgba(255,61,154,.5)}
+.t-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+.t-top h3{font-size:19px}
+.date{font-size:12.5px;padding:4px 12px;border-radius:20px;background:rgba(255,182,39,.12);color:var(--amber);border:1px solid rgba(255,182,39,.3);white-space:nowrap;height:fit-content}
+ul.dots{list-style:none;margin:8px 0 12px}
+ul.dots li{position:relative;padding-inline-start:20px;color:#cfcdf0;font-size:14.8px;margin-bottom:6px}
+ul.dots li::before{content:'▹';position:absolute;inset-inline-start:0;color:var(--pink)}
+html[dir=rtl] ul.dots li::before{content:'◃'}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{font-size:12px;padding:3px 11px;border-radius:20px;background:rgba(91,75,255,.15);border:1px solid rgba(91,75,255,.4);color:#c7c1ff}
+.status{display:inline-block;font-size:12px;padding:3px 11px;border-radius:20px;font-weight:700}
+.st-live{background:rgba(45,255,154,.12);color:var(--green);border:1px solid rgba(45,255,154,.35)}
+.st-wait{background:rgba(255,182,39,.12);color:var(--amber);border:1px solid rgba(255,182,39,.35)}
+.st-pause{background:rgba(255,61,154,.12);color:var(--pink);border:1px solid rgba(255,61,154,.35)}
+
+/* GRIDS & CARDS */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{position:relative;padding:24px 22px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);overflow:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .45s;display:flex;flex-direction:column}
+.card::before{content:'';position:absolute;top:0;left:0;height:3px;width:100%;background:var(--grad);transform:translateX(-101%);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover{transform:translateY(-8px);border-color:rgba(34,227,255,.3);box-shadow:0 26px 54px -24px rgba(91,75,255,.7)}
+.card:hover::before{transform:translateX(0)}
+.card .emoji{font-size:32px;margin-bottom:12px;display:inline-block;transition:transform .5s}
+.card:hover .emoji{transform:scale(1.15) rotate(-8deg)}
+.card h3{font-size:17.5px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14.3px;flex:1}
+.card .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.card .stack span{font-size:11.5px;padding:3px 10px;border-radius:14px;background:rgba(34,227,255,.08);border:1px solid rgba(34,227,255,.25);color:#9ef2ff}
+.card .link{margin-top:12px;font-size:13px;color:var(--amber);cursor:none}
+.card .link:hover{text-decoration:underline}
+.gap-card .k{font-family:'Syne',sans-serif;font-weight:800;font-size:13px;color:var(--pink);margin-bottom:6px}
+.gap-card dl{font-size:13.6px;color:#cfcdf0}
+.gap-card dt{color:var(--cyan);font-weight:700;font-size:12.5px;margin-top:8px}
+
+/* CRITERIA BARS */
+.wrap2{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.bar-item{margin-bottom:22px}
+.bar-head{display:flex;justify-content:space-between;font-size:15px;margin-bottom:8px;gap:12px}
+.bar-head b{font-family:'Syne',sans-serif;color:var(--cyan);direction:ltr}
+.bar{height:10px;border-radius:10px;background:rgba(255,255,255,.06);overflow:hidden}
+.fill{height:100%;width:0;border-radius:10px;position:relative;overflow:hidden;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.fill::after{content:'';position:absolute;top:0;left:-60%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);opacity:0}
+.fill.done::after{opacity:1;animation:sweep 2.6s ease-in-out infinite}
+@keyframes sweep{0%{left:-60%}60%,100%{left:130%}}
+.bar-item:nth-child(4n+1) .fill{background:linear-gradient(90deg,var(--indigo),var(--cyan))}
+.bar-item:nth-child(4n+2) .fill{background:linear-gradient(90deg,var(--pink),var(--amber))}
+.bar-item:nth-child(4n+3) .fill{background:linear-gradient(90deg,var(--cyan),var(--indigo))}
+.bar-item:nth-child(4n+4) .fill{background:linear-gradient(90deg,var(--amber),var(--pink))}
+.bar-sub{font-size:12.8px;color:var(--muted);margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{padding:7px 14px;border-radius:30px;font-size:13.5px;background:rgba(255,255,255,.04);border:1px solid var(--line);transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s}
+.chip:hover{transform:translateY(-7px)}
+.chip:nth-child(4n+1):hover{border-color:var(--indigo);box-shadow:0 10px 24px -8px var(--indigo)}
+.chip:nth-child(4n+2):hover{border-color:var(--pink);box-shadow:0 10px 24px -8px var(--pink)}
+.chip:nth-child(4n+3):hover{border-color:var(--cyan);box-shadow:0 10px 24px -8px var(--cyan)}
+.chip:nth-child(4n+4):hover{border-color:var(--amber);box-shadow:0 10px 24px -8px var(--amber)}
+.panel{padding:24px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line)}
+.panel h4{font-size:17px;margin-bottom:14px}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.tbl th{background:rgba(91,75,255,.22);color:#fff;font-weight:700;padding:11px 14px;text-align:start}
+.tbl td{padding:10px 14px;border-top:1px solid var(--line);color:#d6d4f3;background:rgba(14,12,44,.5)}
+.tbl tr:hover td{background:rgba(91,75,255,.1)}
+.tbl-wrap{overflow-x:auto;border-radius:14px}
+.lvl{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:8px}
+
+/* STEPS FLOW */
+.flow{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:14px;counter-reset:s}
+.step{position:relative;padding:20px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line);counter-increment:s;transition:transform .35s,border-color .35s}
+.step:hover{transform:translateY(-6px);border-color:rgba(255,182,39,.45)}
+.step::before{content:counter(s);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;margin-bottom:10px;font-family:'Syne',sans-serif;font-weight:800;background:linear-gradient(135deg,var(--indigo),var(--pink));color:#fff}
+.step h4{font-size:15px;margin-bottom:4px}
+.step p{font-size:13.2px;color:var(--muted)}
+
+/* DAY SCHEDULE */
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.day{padding:20px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line);transition:transform .35s,box-shadow .35s}
+.day:hover{transform:translateY(-6px);box-shadow:0 18px 40px -18px var(--cyan)}
+.day .d{font-family:'Syne','Tajawal',sans-serif;font-weight:800;font-size:13px;color:var(--amber);margin-bottom:6px}
+.day h4{font-size:15.5px;margin-bottom:6px}
+.day p{font-size:13px;color:var(--muted)}
+
+/* TRAINEE RING STATS */
+.rings{display:flex;flex-wrap:wrap;gap:20px}
+.ring-card{display:flex;align-items:center;gap:16px;padding:16px 24px 16px 16px;border-radius:60px;background:var(--card);border:1px solid var(--line);animation:langGlow 3s ease-in-out infinite}
+html[dir=rtl] .ring-card{padding:16px 16px 16px 24px}
+@keyframes langGlow{0%,100%{box-shadow:0 0 0 rgba(34,227,255,0)}50%{box-shadow:0 0 28px -4px rgba(34,227,255,.45)}}
+.ring{position:relative;width:62px;height:62px}
+.ring svg{transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:5}
+.ring .bg{stroke:rgba(255,255,255,.08)}
+.ring .fg{stroke-linecap:round;stroke-dasharray:170;stroke-dashoffset:170;transition:stroke-dashoffset 1.8s cubic-bezier(.2,.8,.2,1)}
+.ring span{position:absolute;inset:0;display:grid;place-items:center;font-family:'Syne',sans-serif;font-weight:800;font-size:18px}
+.ring-card b{display:block;font-size:16px}
+.ring-card small{color:var(--muted);font-size:13px}
+
+/* STAGE CHART */
+.hbar{display:grid;grid-template-columns:170px 1fr 40px;align-items:center;gap:12px;margin-bottom:10px;font-size:13.5px}
+.hbar .track{height:14px;border-radius:8px;background:rgba(255,255,255,.05);overflow:hidden}
+.hbar .fill{height:100%;background:linear-gradient(90deg,var(--indigo),var(--pink))}
+html[dir=rtl] .hbar .fill{background:linear-gradient(270deg,var(--indigo),var(--pink))}
+.hbar b{font-family:'Syne',sans-serif;direction:ltr;text-align:end}
+
+/* SIGNATURE */
+.sig-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ccard{display:flex;align-items:center;gap:16px;padding:16px 20px;border-radius:16px;background:var(--card);border:1px solid var(--line);margin-bottom:12px;transition:transform .35s,border-color .35s,box-shadow .35s;cursor:none}
+html[dir=rtl] .ccard:hover{transform:translateX(-14px)}
+html[dir=ltr] .ccard:hover{transform:translateX(14px)}
+.ccard:hover{border-color:rgba(34,227,255,.4);box-shadow:0 0 30px -12px var(--cyan)}
+.cicon{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:20px;background:rgba(91,75,255,.2)}
+.ccard small{display:block;color:var(--muted);font-size:12px}
+.ccard b{font-weight:500;font-size:15px;word-break:break-word}
+.pulse-zone{position:relative;display:grid;place-items:center;height:400px}
+.ripple{position:absolute;width:170px;height:170px;border-radius:50%;border:2px solid var(--pink);animation:ripple 3.6s cubic-bezier(.2,.6,.3,1) infinite;opacity:0}
+.ripple:nth-child(2){animation-delay:1.2s;border-color:var(--cyan)}
+.ripple:nth-child(3){animation-delay:2.4s;border-color:var(--amber)}
+@keyframes ripple{0%{transform:scale(1);opacity:.85}100%{transform:scale(2.4);opacity:0}}
+.pulse-avatar{position:relative;width:170px;height:170px;border-radius:50%;display:grid;place-items:center;font-family:'Syne',sans-serif;font-weight:800;font-size:58px;color:#fff;background:linear-gradient(135deg,var(--indigo),var(--pink) 60%,var(--amber));animation:pulseAv 2.4s ease-in-out infinite;z-index:2}
+@keyframes pulseAv{0%,100%{transform:scale(1);box-shadow:0 0 40px rgba(255,61,154,.5)}50%{transform:scale(1.06);box-shadow:0 0 80px rgba(34,227,255,.55)}}
+.signature{font-family:'Syne','Tajawal',sans-serif;font-size:28px;font-weight:800;margin-top:24px}
+.signature small{display:block;font-family:var(--fb);font-weight:400;font-size:14px;color:var(--muted);margin-top:6px}
+
+footer{position:relative;z-index:3;text-align:center;padding:34px 5vw;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer b{color:var(--text)}
+
+.reveal{opacity:0;transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
+.reveal.up{transform:translateY(56px)}
+.reveal.left{transform:translateX(-70px)}
+.reveal.right{transform:translateX(70px)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+@media (max-width:1100px){
+  .nav-links{gap:14px}.nav-links a{font-size:13px}
+  .grid3{grid-template-columns:repeat(2,1fr)}
+  .grid4,.counters{grid-template-columns:repeat(2,1fr)}
+  .days{grid-template-columns:repeat(3,1fr)}
+  .flow{grid-auto-flow:row;grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:900px){
+  nav{padding:12px 16px}
+  .burger{display:block}
+  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(10,8,34,.96);max-height:0;overflow:hidden;transition:max-height .4s}
+  .nav-links.open{max-height:520px}
+  .nav-links a{display:block;padding:13px 20px;font-size:15px}
+  section{padding:76px 16px}
+  #hero{grid-template-columns:1fr;gap:20px;padding-top:110px}
+  .hero-visual{min-height:440px}
+  .wrap2,.grid2,.sig-wrap{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .days{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .timeline{padding-inline-start:30px}
+  .tcard::before{inset-inline-start:-27px}
+  .timeline::before{inset-inline-start:4px}
+  .hbar{grid-template-columns:120px 1fr 34px;font-size:12.5px}
+  .pulse-zone{height:330px}
+}
+@media (max-width:520px){
+  .counters,.grid4,.days,.flow{grid-template-columns:1fr}
+  .logo{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<style>
+.type-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.type-tab{font-family:inherit;font-weight:700;font-size:14px;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:9px 18px;border-radius:30px;cursor:none;transition:all .3s}
+.type-tab:hover{color:var(--text);border-color:rgba(34,227,255,.4)}
+.type-tab.active{color:#fff;background:linear-gradient(90deg,var(--indigo),var(--pink));border-color:transparent;box-shadow:0 10px 26px -10px var(--pink)}
+.crit-sec{margin-bottom:18px}
+.crit-sec .bar-head{margin-bottom:8px}
+.crit{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:10px 0;border-top:1px dashed var(--line)}
+.crit .w{font-family:'Syne',sans-serif;font-weight:800;color:var(--amber);font-size:18px;direction:ltr}
+.crit b{display:block;font-size:14.5px}
+.crit small{color:var(--muted);font-size:13px;line-height:1.6;display:block}
+.bonus-row{display:flex;flex-wrap:wrap;gap:12px}
+.bonus{flex:1 1 200px;padding:16px;border-radius:14px;background:rgba(45,255,154,.06);border:1px solid rgba(45,255,154,.25)}
+.bonus .w{font-family:'Syne',sans-serif;font-weight:800;color:var(--green);font-size:22px;direction:ltr;display:inline-block}
+.bonus b{display:block;font-size:14.5px;margin:4px 0}
+.bonus small{color:var(--muted);font-size:13px}
+.ce-card{padding:16px;border-radius:14px;background:rgba(255,61,154,.06);border:1px solid rgba(255,61,154,.28)}
+.ce-card b{display:block;font-size:14.5px;margin-bottom:4px;color:#ffd1e6}
+.ce-card small{color:var(--muted);font-size:13px}
+.quote{margin-top:10px;padding:12px 14px;border-radius:12px;background:rgba(91,75,255,.1);border-inline-start:3px solid var(--indigo);font-size:13.5px;color:#d9d6ff}
+.report-btn{margin-top:30px}
+.note{margin-top:22px;padding:16px 20px;border-radius:14px;background:rgba(255,182,39,.07);border:1px solid rgba(255,182,39,.28);color:#f4e2bf;font-size:14.5px}
+</style>
+
+<div id="loader">
+  <div class="loader-initials">FA</div>
+  <div class="loader-bar"><span></span></div>
+  <div class="loader-text" data-t="loading"></div>
+</div>
+<canvas id="particles"></canvas>
+<div class="noise"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<nav id="nav">
+  <a href="#hero" class="logo" data-t="logo"></a>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#journey" data-t="nav0"></a></li>
+      <li><a href="#establishment" data-t="nav1"></a></li>
+      <li><a href="#coaching" data-t="nav2"></a></li>
+      <li><a href="#training" data-t="nav3"></a></li>
+      <li><a href="#knowledge" data-t="nav4"></a></li>
+      <li><a href="#automation" data-t="nav5"></a></li>
+      <li><a href="#transfer" data-t="nav6"></a></li>
+    </ul>
+    <button class="lang-btn" id="langBtn">EN</button>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<main>
+<section id="hero">
+  <div>
+    <div class="tag reveal up"><i></i><span data-t="heroTag"></span></div>
+    <div class="hero-kicker reveal up d1" data-t="heroKicker"></div>
+    <h1 class="hero-name reveal up d1"><span class="shimmer" data-t="heroTitle"></span></h1>
+    <p class="hero-desc reveal up d2" data-t="heroDesc"></p>
+    <div class="btns reveal up d3">
+      <a href="#journey" class="btn btn-primary" data-t="cta1"></a>
+      <a href="https://fyousef-2023.github.io/CSM-PORTAL/" target="_blank" rel="noopener" class="btn btn-ghost" data-t="cta2"></a>
+    </div>
+  </div>
+  <div class="hero-visual reveal right d2">
+    <div class="orb"></div>
+    <div class="card3d">
+      <div class="avatar-wrap"><div class="avatar-ring"></div><div class="avatar-ring r2"></div><div class="avatar">FA</div></div>
+      <h3 data-t="cardName"></h3>
+      <div class="role" data-t="cardRole"></div>
+      <div class="stats">
+        <div class="stat"><b>4</b><small data-t="st1"></small></div>
+        <div class="stat"><b>+50</b><small data-t="st2"></small></div>
+        <div class="stat"><b>64</b><small data-t="st3"></small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+<section id="impact">
+  <div class="eyebrow reveal up" data-t="impEyebrow"></div>
+  <h2 class="section-title reveal up" data-t="impTitle"></h2>
+  <p class="section-sub reveal up" data-t="impSub"></p>
+  <div class="counters" id="counters"></div>
+</section>
+
+<section id="journey">
+  <div class="eyebrow reveal up" data-t="jrEyebrow"></div>
+  <h2 class="section-title reveal up" data-t="jrTitle"></h2>
+  <p class="section-sub reveal up" data-t="jrSub"></p>
+  <div class="timeline" id="journeyTimeline"></div>
+</section>
+
+<!-- 1 ESTABLISHMENT -->
+<section id="establishment">
+  <div class="eyebrow reveal up" data-t="esEyebrow"></div>
+  <h2 class="section-title reveal up" data-t="esTitle"></h2>
+  <p class="section-sub reveal up" data-t="esSub"></p>
+  <div class="grid3" id="esPhases"></div>
+
+  <h3 class="sub-h reveal up"><i>📐</i><span data-t="critH"></span></h3>
+  <p class="section-sub reveal up" style="margin-bottom:20px" data-t="critSub"></p>
+  <div class="type-tabs reveal up" id="typeTabs"></div>
+  <div class="wrap2">
+    <div class="panel reveal left" id="typeBars"></div>
+    <div class="panel reveal right" id="typeCrit"></div>
+  </div>
+
+  <div class="grid2" style="margin-top:28px">
+    <div class="reveal left">
+      <h4 class="sub-h" style="margin-top:0;font-size:18px"><span data-t="ceH"></span></h4>
+      <div class="grid2" id="ceCards" style="gap:12px"></div>
+    </div>
+    <div class="reveal right">
+      <h4 class="sub-h" style="margin-top:0;font-size:18px"><span data-t="bonusH"></span></h4>
+      <div class="bonus-row" id="bonusCards"></div>
+    </div>
+  </div>
+
+  <h3 class="sub-h reveal up"><i>🔁</i><span data-t="updH"></span></h3>
+  <div class="flow" id="updFlow"></div>
+
+  <h3 class="sub-h reveal up"><i>⚙️</i><span data-t="scriptH"></span></h3>
+  <p class="section-sub reveal up" style="margin-bottom:20px" data-t="scriptSub"></p>
+  <div class="wrap2">
+    <div class="panel reveal left"><h4 data-t="groupsH"></h4><div class="tbl-wrap"><table class="tbl" id="groupsTbl"></table></div></div>
+    <div class="reveal right" id="scriptSteps"></div>
+  </div>
+  <div class="note reveal up" data-t="scriptNote"></div>
+
+  <h3 class="sub-h reveal up"><i>📝</i><span data-t="formsH"></span></h3>
+  <div class="chips reveal up" id="formsChips"></div>
+  <div class="btns report-btn reveal up">
+    <a class="btn btn-primary" href="https://fyousef-2023.github.io/Qa-establishment-report/" target="_blank" rel="noopener" data-t="openReport"></a>
+    <a class="btn btn-ghost" href="https://fyousef-2023.github.io/CSM_Quality_Criteria_Interactive/" target="_blank" rel="noopener" data-t="critPage"></a>
+  </div>
+</section>
+
+<!-- 2 COACHING -->
+<section id="coaching">
+  <div class="eyebrow reveal up" data-t="coEyebrow"></div>
+  <h2 class="section-title reveal up" data-t="coTitle"></h2>
+  <p class="section-sub reveal up" data-t="coSub"></p>
+  <div class="grid3" id="coOverview"></div>
+  <h3 class="sub-h reveal up"><i>🗓️</i><span data-t="cadH"></span></h3>
+  <div class="grid2" id="coCadence"></div>
+  <h3 class="sub-h reveal up"><i>🗒️</i><span data-t="coRepH"></span></h3>
+  <div class="grid3" id="coReport"></div>
+  <div class="btns report-btn reveal up">
+    <a class="btn btn-primary" href="https://fyousef-2023.github.io/Coaching-program-Report/" target="_blank" rel="noopener" data-t="openReport"></a>
+  </div>
+</section>
+
+<!-- 3 TRAINING -->
+<section id="training">
+  <div class="eyebrow reveal up" data-t="trEyebrow"></div>
+  <h2 class="section-title reveal up" data-t="trTitle"></h2>
+  <p class="section-sub reveal up" data-t="trSub"></p>
+  <div class="rings reveal up" id="trRings"></div>
+  <h3 class="sub-h reveal up"><i>📅</i><span data-t="daysH"></span></h3>
+  <div class="days" id="days"></div>
+  <h3 class="sub-h reveal up"><i>⏱️</i><span data-t="schedH"></span></h3>
+  <div class="flow" id="sched"></div>
+  <h3 class="sub-h reveal up"><i>👩‍💼</i><span data-t="traineesH"></span></h3>
+  <div class="tbl-wrap reveal up"><table class="tbl" id="traineesTbl"></table></div>
+  <h3 class="sub-h reveal up"><i>🔍</i><span data-t="obsH"></span></h3>
+  <div class="grid3" id="obs"></div>
+  <div class="grid2" style="margin-top:36px">
+    <div class="panel reveal left"><h4 data-t="rulesH"></h4><ul class="dots" id="rules"></ul></div>
+    <div class="panel reveal right"><h4 data-t="delivH"></h4><ul class="dots" id="deliv"></ul></div>
+  </div>
+  <div class="btns report-btn reveal up">
+    <a class="btn btn-primary" href="https://fyousef-2023.github.io/Csm-training-report/" target="_blank" rel="noopener" data-t="openReport"></a>
+    <a class="btn btn-ghost" href="https://fyousef-2023.github.io/CSM_Training_Program/" target="_blank" rel="noopener" data-t="trBtn2"></a>
+  </div>
+</section>
+
+<!-- 4 KNOWLEDGE BASE -->
+<section id="knowledge">
+  <div class="eyebrow reveal up" data-t="knEyebrow"></div>
+  <h2 class="section-title reveal up" data-t="knTitle"></h2>
+  <p class="section-sub reveal up" data-t="knSub"></p>
+  <div class="counters" id="knCounters"></div>
+  <div class="grid2" style="margin-top:28px" id="knPS"></div>
+  <h3 class="sub-h reveal up"><i>🧱</i><span data-t="knSecH"></span></h3>
+  <div class="grid3" id="knSections"></div>
+  <div id="knGroups"></div>
+  <h3 class="sub-h reveal up"><i>📑</i><span data-t="sopH"></span></h3>
+  <p class="section-sub reveal up" style="margin-bottom:20px" data-t="sopSub"></p>
+  <div class="flow" id="sopFlow"></div>
+  <h3 class="sub-h reveal up"><i>🎯</i><span data-t="knImpH"></span></h3>
+  <div class="grid2" id="knImpact"></div>
+  <div class="btns report-btn reveal up">
+    <a class="btn btn-primary" href="https://fyousef-2023.github.io/CSM-portal-project-report/" target="_blank" rel="noopener" data-t="openReport"></a>
+    <a class="btn btn-ghost" href="https://fyousef-2023.github.io/CSM-PORTAL/" target="_blank" rel="noopener" data-t="cta2"></a>
+  </div>
+</section>
+
+<!-- 5 AUTOMATION -->
+<section id="automation">
+  <div class="eyebrow reveal up" data-t="auEyebrow"></div>
+  <h2 class="section-title reveal up" data-t="auTitle"></h2>
+  <p class="section-sub reveal up" data-t="auSub"></p>
+  <div class="timeline" id="auTimeline"></div>
+  <h3 class="sub-h reveal up"><i>🥪</i><span data-t="sandH"></span></h3>
+  <div class="grid2" id="sandParts"></div>
+  <div class="grid2" style="margin-top:24px" id="auExtra"></div>
+  <div class="btns report-btn reveal up">
+    <a class="btn btn-primary" href="https://fyousef-2023.github.io/Automation_Project/" target="_blank" rel="noopener" data-t="openReport"></a>
+  </div>
+</section>
+
+<!-- 6 KNOWLEDGE TRANSFER -->
+<section id="transfer">
+  <div class="eyebrow reveal up" data-t="ktEyebrow"></div>
+  <h2 class="section-title reveal up" data-t="ktTitle"></h2>
+  <p class="section-sub reveal up" data-t="ktSub"></p>
+  <div class="counters" id="ktCounters"></div>
+  <h3 class="sub-h reveal up"><i>📦</i><span data-t="scopeH"></span></h3>
+  <div class="panel reveal up"><ul class="dots" id="ktScope"></ul></div>
+  <h3 class="sub-h reveal up"><i>🗓️</i><span data-t="sessH"></span></h3>
+  <div class="timeline" id="ktTimeline"></div>
+  <div class="grid2" style="margin-top:12px">
+    <div class="panel reveal left"><h4 data-t="m1H"></h4><ul class="dots" id="m1"></ul></div>
+    <div class="panel reveal right"><h4 data-t="m2H"></h4><ul class="dots" id="m2"></ul></div>
+  </div>
+  <h3 class="sub-h reveal up"><i>🧰</i><span data-t="toolsH"></span></h3>
+  <div class="grid4" id="ktTools"></div>
+  <div class="btns report-btn reveal up">
+    <a class="btn btn-primary" href="https://fyousef-2023.github.io/Knowledge-transfer-/" target="_blank" rel="noopener" data-t="openReport"></a>
+  </div>
+</section>
+
+<!-- SIGNATURE -->
+<section id="signature">
+  <div class="eyebrow reveal up" data-t="sgEyebrow"></div>
+  <h2 class="section-title reveal up" data-t="sgTitle"></h2>
+  <div class="sig-wrap">
+    <div class="reveal left">
+      
+      <a class="ccard" href="mailto:f.yousef@rewaa.com"><div class="cicon">📧</div><div><small data-t="cWork"></small><b>f.yousef@rewaa.com</b></div></a>
+      <a class="ccard" href="mailto:fidaa.as@gmail.com"><div class="cicon">✉️</div><div><small data-t="cEmail"></small><b>fidaa.as@gmail.com</b></div></a>
+      <div class="ccard"><div class="cicon">🏢</div><div><small data-t="cTeam"></small><b data-t="cTeamV"></b></div></div>
+      <a class="ccard" href="https://www.linkedin.com/in/fidaa-y-abushunnar-%F0%9F%87%B5%F0%9F%87%B8-89651611b" target="_blank" rel="noopener"><div class="cicon">in</div><div><small>LinkedIn</small><b dir="ltr">fidaa-y-abushunnar-🇵🇸</b></div></a>
+      <div class="signature"><span data-t="sigName"></span><small data-t="sigRole"></small></div>
+    </div>
+    <div class="pulse-zone reveal right">
+      <div class="ripple"></div><div class="ripple"></div><div class="ripple"></div>
+      <div class="pulse-avatar">FA</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><span data-t="footer"></span></footer>
+
+<script>
+/* All content below is taken from the six project reports on fyousef-2023.github.io */
+const RP='https://fyousef-2023.github.io/';
+const T={
+ loading:{ar:'جارٍ تحميل الملف',en:'Loading profile'},
+ logo:{ar:'فداء <b>أبو شنار</b>',en:'Fidaa <b>AbuShunnar</b>'},
+ nav0:{ar:'المسار',en:'Journey'},nav1:{ar:'التأسيس',en:'Establishment'},nav2:{ar:'التدريب والمتابعة',en:'Coaching'},nav3:{ar:'تدريب الموظفين الجدد',en:'Onboarding'},
+ nav4:{ar:'القاعدة المعرفية',en:'Knowledge Base'},nav5:{ar:'الأتمتة',en:'Automation'},nav6:{ar:'نقل المعرفة',en:'Handover'},
+ heroTag:{ar:'رِواء · فريق نجاح العملاء · أبريل – أكتوبر 2026',en:'Rewaa · Customer Success · Apr – Oct 2026'},
+ heroKicker:{ar:'ملف إنجازات قسم الجودة',en:'Quality Department Portfolio'},
+ heroTitle:{ar:'بناء الجودة والتدريب والمعرفة لفريق نجاح العملاء',en:'Building Quality, Training & Knowledge for Customer Success'},
+ heroDesc:{ar:'تأسيس الجودة بالمعايير والنماذج والسكربت، برنامج تدريب ومتابعة مستمر، برنامج تأهيل للموظفين الجدد، بوابة نجاح العملاء ومشروع SOP، أتمتة التقرير الأسبوعي، ونقل المعرفة والتسليم.',
+          en:'Establishing Quality through criteria, forms and a script; a continuous coaching program; new-hire onboarding; the CSM Portal and SOP project; weekly report automation; and knowledge transfer & handover.'},
+ cta1:{ar:'استعراض العمل ↓',en:'Explore the work ↓'},cta2:{ar:'بوابة نجاح العملاء ↗',en:'CSM Portal ↗'},
+ cardName:{ar:'فداء يوسف أبو شنار',en:'Fidaa Yousef AbuShunnar'},
+ cardRole:{ar:'قسم الجودة — فريق نجاح العملاء',en:'Quality Department — Customer Success'},
+ st1:{ar:'أنواع تفاعل بمعايير',en:'interaction types with criteria'},st2:{ar:'رابط ومصدر في البوابة',en:'portal resources'},st3:{ar:'حالة SOP موثّقة',en:'SOP cases documented'},
+ impEyebrow:{ar:'الأثر بالأرقام',en:'Impact in numbers'},
+ impTitle:{ar:'ستة مشاريع، <span>منظومة واحدة</span>',en:'Six projects, <span>one system</span>'},
+ impSub:{ar:'الأرقام مأخوذة من تقارير المشاريع المنشورة.',en:'Figures taken from the published project reports.'},
+ jrEyebrow:{ar:'المسار',en:'Journey'},
+ jrTitle:{ar:'المسار <span>الزمني</span>',en:'The <span>timeline</span>'},
+ jrSub:{ar:'من مقترح الأتمتة الأول إلى تسليم المعرفة كاملة.',en:'From the first automation proposal to a full knowledge handover.'},
+ openReport:{ar:'التقرير الكامل ↗',en:'Full report ↗'},
+ esEyebrow:{ar:'01 · تأسيس الجودة',en:'01 · Quality Establishment'},
+ esTitle:{ar:'المعايير، <span>الفورم، والسكربت</span>',en:'Criteria, <span>form & script</span>'},
+ esSub:{ar:'تأسيس الجودة داخل فريق نجاح العملاء: كتابة المعايير ووصفها، بناء الفورم الأول ولوحة Power BI، تحديث المعايير بإضافة قسم المحادثات وأمثلة عملية، وبناء الفورم الثاني مع سكربت معالجته. الفترة: أبريل – سبتمبر 2026.',
+        en:'Establishing Quality within the CSM team: writing the criteria and their descriptions, building the first form and the Power BI dashboard, updating the criteria with a Chat section and practical examples, and building the second form with its processing script. Period: April – September 2026.'},
+ critH:{ar:'معايير الجودة التفصيلية — الإصدار المحدّث',en:'Detailed quality criteria — updated version'},
+ critSub:{ar:'المعايير الحالية بعد تحديث أغسطس 2026 بأقسامها وأوزانها وأوصافها، كما هي منشورة في صفحة المعايير التفاعلية. كل نوع تفاعل من 100 نقطة.',en:'The current criteria after the August 2026 update, with sections, weights and descriptions as published on the interactive criteria page. Each interaction type is out of 100.'},
+ ceH:{ar:'الأخطاء الحرجة — أي خطأ واحد يصفّر العلامة',en:'Critical errors — any one zeroes the score'},
+ bonusH:{ar:'البونص — حتى 15 نقطة',en:'Bonus — up to 15 points'},
+ updH:{ar:'تحديث أغسطس 2026',en:'August 2026 update'},
+ scriptH:{ar:'الفورم الثاني والسكربت — سبتمبر 2026',en:'Second form & script — September 2026'},
+ scriptSub:{ar:'إطلاق «نموذج تقييم جودة تواصل نجاح العملاء | CSM Call QA Review Form» في 7 سبتمبر 2026، مرتبط بسكربت Google Apps Script مستوحى من لوحة Power BI الأولى (أبريل 2026)، يعالج الاستجابات ويبني لوحة أداء مكافئة داخل الشيت تلقائياً.',en:'Launched the "CSM Call QA Review Form" on 7 September 2026, linked to a Google Apps Script inspired by the first Power BI dashboard (April 2026), which processes responses and builds an equivalent dashboard inside the sheet automatically.'},
+ groupsH:{ar:'مجموعات الفورم',en:'Form groups'},
+ scriptNote:{ar:'كل البيانات والمؤشرات التي يبنيها السكربت كانت متاحة أصلاً في لوحة Power BI المبنية في أبريل — وهي الخيار الأفضل عملياً مقارنة بسكربت طويل يبطّئ التحميل. ومع ذلك حُوّل منطق اللوحة إلى سكربت يبني لوحة مكافئة داخل الشيت نفسه، بمبادرة شخصية ضمن التطوير المستمر.',
+             en:'Everything the script builds was already available in the Power BI dashboard built in April — practically the better choice versus a long script that slows loading. Even so, the dashboard logic was converted into a script that builds an equivalent dashboard inside the sheet, on personal initiative as part of continuous improvement.'},
+ formsH:{ar:'الفورمات ذات الصلة',en:'Related forms'},
+ critPage:{ar:'صفحة المعايير التفاعلية ↗',en:'Interactive criteria page ↗'},
+ coEyebrow:{ar:'02 · التدريب والمتابعة',en:'02 · Coaching & Development'},
+ coTitle:{ar:'برنامج التدريب <span>والمتابعة المستمر</span>',en:'Continuous <span>coaching program</span>'},
+ coSub:{ar:'برنامج متابعة وتدريب مستمر لموظفي فريق نجاح العملاء، قائم على تحليل أداء كل موظف وتحويله إلى جلسات تدريب فردية موثّقة بنموذج موحّد. الحالة: مستمر منذ الانضمام لفريق نجاح العملاء.',en:'An ongoing coaching and follow-up program for the CSM team, built on each agent\'s performance analysis and turned into documented one-on-one sessions using a standardized report. Status: ongoing since joining the Customer Success team.'},
+ cadH:{ar:'آلية المتابعة',en:'Coaching cadence'},
+ coRepH:{ar:'نموذج التقرير الموحّد والمجلدات',en:'Standardized report & folders'},
+ trEyebrow:{ar:'03 · تدريب الموظفين الجدد',en:'03 · New-hire Training'},
+ trTitle:{ar:'برنامج تدريب <span>موظفي نجاح العملاء</span>',en:'CSM <span>onboarding program</span>'},
+ trSub:{ar:'برنامج تدريبي متكامل للموظفين الجدد مبني على بوابة نجاح العملاء، يحوّل محتواها إلى مسار تعلّم متدرّج: مضمون كل مصدر، طريقة الوصول إليه، وكيفية استخدامه مع العميل. الفترة: 2 سبتمبر – 1 أكتوبر 2026.',en:'A complete onboarding program built on the CSM Portal, turning it into a progressive learning path: each resource, how to reach it, and how to use it with customers. Period: 2 September – 1 October 2026.'},
+ daysH:{ar:'الأيام الخمسة',en:'The five days'},schedH:{ar:'هيكل اليوم التدريبي الثابت',en:'Fixed daily structure'},
+ traineesH:{ar:'المتدربات ومسار كل منهن',en:'Trainees & progress'},obsH:{ar:'الملاحظات التشغيلية',en:'Operational observations'},
+ rulesH:{ar:'التوصيات — قواعد الجاهزية قبل اليوم الأول',en:'Recommendations — readiness rules before Day 1'},delivH:{ar:'العمل المنجز',en:'Work delivered'},
+ trBtn2:{ar:'منصة البرنامج ↗',en:'Program platform ↗'},
+ knEyebrow:{ar:'04 · القاعدة المعرفية',en:'04 · Knowledge Base'},
+ knTitle:{ar:'بوابة نجاح العملاء — <span>توحيد المصادر</span>',en:'CSM Portal — <span>unifying resources</span>'},
+ knSub:{ar:'بوابة بُنيت من الصفر كمرجع موحّد لكل ما يحتاجه الموظف الحالي والجديد، إلى جانب مشروع SOP المرتبط بها. الحالة: قيد التطوير المستمر.',en:'A portal built from scratch as one reference for everything current and new employees need, alongside the related SOP project. Status: actively maintained.'},
+ knSecH:{ar:'خمسة أقسام رئيسية',en:'Five core sections'},
+ sopH:{ar:'مشروع SOP — مكتمل',en:'The SOP project — completed'},
+ sopSub:{ar:'مرجع تفاعلي يوثّق الإجراء الصحيح لكل سيناريو يواجهه موظف نجاح العملاء: 64 حالة مرجعية مبنية على قائمة الحالات الموحّدة، وسيُربط بالبوابة قريباً.',en:'An interactive reference documenting the right procedure for every scenario a CSM faces: 64 reference cases built on the Cases Master List, to be linked from the portal soon.'},
+ knImpH:{ar:'الأثر والفائدة',en:'Impact'},
+ auEyebrow:{ar:'05 · الأتمتة',en:'05 · Automation'},
+ auTitle:{ar:'أتمتة <span>التقرير الأسبوعي</span>',en:'Weekly report <span>automation</span>'},
+ auSub:{ar:'مشروع تم اقتراحه وتصميم منهجيته وبناؤه بالكامل لفريقي الدعم الفني ونجاح العملاء: رسالة أداء أسبوعية آلية لكل موظف بصيغة احترافية مبنية على منهجية Sandwich Feedback. الفترة: مايو 2025 – حتى الآن.',en:'Proposed, methodically designed and fully built for the Technical Support and Customer Success teams: an automated weekly performance message for every employee in a professional Sandwich Feedback format. Period: May 2025 – present.'},
+ sandH:{ar:'منهجية الرسالة — أربعة أجزاء',en:'The message — four parts'},
+ ktEyebrow:{ar:'06 · نقل المعرفة',en:'06 · Knowledge Transfer'},
+ ktTitle:{ar:'نقل المعرفة <span>والتسليم</span>',en:'Knowledge transfer <span>& handover</span>'},
+ ktSub:{ar:'نقل كامل المعرفة والأدوات الخاصة بجودة فريق نجاح العملاء، بحيث يكون كل ما يلزم لاستمرار العمل متاحاً وجاهزاً للاستخدام. الفترة: 13 – 30 سبتمبر 2026.',en:'A full transfer of CSM Quality knowledge and tools, so everything needed to continue the work is available and ready. Period: 13 – 30 September 2026.'},
+ scopeH:{ar:'نطاق التسليم',en:'Handover scope'},sessH:{ar:'الجدول الزمني للجلسات',en:'Session timeline'},
+ m1H:{ar:'الاجتماع الأول — رحلة العميل من التفعيل إلى التبنّي',en:'Meeting 1 — Customer journey: activation to adoption'},
+ m2H:{ar:'الاجتماع الثاني — إعادة التفعيل والحالات ومراجعة الجودة',en:'Meeting 2 — Reactivation, cases & quality review'},
+ toolsH:{ar:'أدوات الجودة المسلّمة',en:'Quality tools handed over'},
+ sgEyebrow:{ar:'إعداد',en:'Prepared by'},
+ sgTitle:{ar:'قسم الجودة — <span>فريق نجاح العملاء</span>',en:'Quality Department — <span>Customer Success</span>'},
+ cEmail:{ar:'البريد الإلكتروني الشخصي',en:'Personal email'},cWork:{ar:'البريد الإلكتروني — رِواء',en:'Rewaa email'},cTeam:{ar:'الفريق',en:'Team'},
+ cTeamV:{ar:'نجاح العملاء — رِواء',en:'Customer Success — Rewaa'},
+ sigName:{ar:'فداء يوسف أبو شنار',en:'Fidaa Yousef AbuShunnar'},
+ sigRole:{ar:'قسم الجودة — فريق نجاح العملاء | رِواء',en:'Quality Department — Customer Success Team | Rewaa'},
+ footer:{ar:'إعداد: <b>فداء يوسف</b> — قسم الجودة — فريق نجاح العملاء | رِواء',en:'Prepared by: <b>Fidaa Yousef</b> — Quality Department — Customer Success Team | Rewaa'}
+};
+
+const marquee=[['Google Forms','QA'],['Apps Script','Script'],['Power BI','BI'],['n8n','Automation'],['Zoho CRM','CRM'],['Metabase','Data'],['Maqsam','Calls'],['3CX','Calls'],['Open CX','Chat'],['GitHub Pages','Portal'],['SOP Builder','SOP'],['Slack','Comms'],['Grubtech','Partner'],['RewaaPay','Payments'],['Monsha\'at','Program']];
+
+const counters=[
+ {n:4,ar:'أنواع تفاعل مغطّاة بالمعايير',en:'Interaction types covered by the criteria'},
+ {n:15,ar:'نقطة بونص إضافية كحد أقصى، و4 أخطاء حرجة',en:'Max bonus points, plus 4 critical errors'},
+ {n:50,suf:'+',ar:'رابطاً ومصدراً موحّداً في البوابة',en:'Links and resources unified in the portal'},
+ {n:64,ar:'حالة SOP موثّقة',en:'SOP cases documented'},
+ {n:6,ar:'متدربات جديدات في برنامج التأهيل',en:'New trainees in the onboarding program'},
+ {n:15,ar:'جلسة تدريبية مع اختبار يومي وتاسكات',en:'Training sessions with daily quizzes and tasks'},
+ {n:2,ar:'فريقان مستفيدان من الأتمتة الأسبوعية',en:'Teams covered by the weekly automation'},
+ {n:4,ar:'جلسات نقل معرفة: اجتماعان ومرافقتان عمليتان',en:'Handover sessions: 2 meetings + 2 shadowing'}
+];
+
+const journey=[
+ {d:{ar:'مايو 2025',en:'May 2025'},t:{ar:'مقترح أتمتة التقرير الأسبوعي',en:'Weekly report automation proposal'},b:[{ar:'اقتراح الفكرة وإعداد المقترح الكامل وتقديمه للإدارة في 26 مايو 2025، ثم تجربتها على حساب n8n تجريبي لإثبات الجدوى',en:'Proposed the idea and submitted the full proposal to management on 26 May 2025, then trialled it on a personal n8n account to prove the concept'}],x:['n8n','Proposal']},
+ {d:{ar:'أبريل 2026',en:'April 2026'},t:{ar:'تأسيس الجودة',en:'Quality establishment'},b:[{ar:'كتابة معايير الجودة ووصفها، بناء الفورم الأول، وإنشاء لوحة Power BI المرتبطة به',en:'Wrote the quality criteria and descriptions, built the first form, and created the linked Power BI dashboard'}],x:['Criteria','Form v1','Power BI']},
+ {d:{ar:'12 يوليو – 4 أغسطس 2026',en:'12 Jul – 4 Aug 2026'},t:{ar:'مشروع SOP',en:'The SOP project'},b:[{ar:'إعداد قائمة الحالات واعتمادها، ثم كتابة إجراءات SOP لكل الحالات الـ64',en:'Drafted and approved the case list, then wrote the SOP for all 64 cases'}],x:['64 cases']},
+ {d:{ar:'أغسطس 2026',en:'August 2026'},t:{ar:'تحديث المعايير',en:'Criteria update'},b:[{ar:'إضافة قسم المحادثات (Chat/Open CX) ووصف ومثال عملي لكل معيار، ومشاركتها مع القسم بأمثلة عملية واضحة',en:'Added the Chat/Open CX section and a description and practical example for every criterion, and shared them with the department with clear, practical examples'}],x:['Chat','Examples']},
+ {d:{ar:'سبتمبر 2026',en:'September 2026'},t:{ar:'الفورم الثاني والسكربت، والتأهيل',en:'Second form & script, onboarding'},b:[{ar:'إطلاق الفورم الثاني في 7 سبتمبر مع سكربت Apps Script مستوحى من لوحة Power BI الأولى',en:'Launched the second form on 7 September with an Apps Script inspired by the first Power BI dashboard'},{ar:'برنامج تدريب الموظفين الجدد: ست متدربات بين 2 سبتمبر و1 أكتوبر',en:'New-hire onboarding: six trainees between 2 September and 1 October'}],x:['Form v2','Apps Script','Onboarding']},
+ {d:{ar:'13 – 30 سبتمبر 2026',en:'13 – 30 Sep 2026'},t:{ar:'نقل المعرفة والتسليم',en:'Knowledge transfer & handover'},b:[{ar:'اجتماعا مشاركة معرفة، جلستا مرافقة عملية، شرح البوابة كاملة، وتسليم أدوات التقييم والأتمتة واللوحات',en:'Two knowledge-sharing meetings, two shadowing sessions, a full portal walkthrough, and handover of evaluation, automation and dashboard tools'}],x:['Meetings','Shadowing','Handover']},
+ {d:{ar:'مستمر',en:'Ongoing'},t:{ar:'التدريب والمتابعة والبوابة',en:'Coaching & the portal'},b:[{ar:'برنامج التدريب والمتابعة مستمر منذ الانضمام للفريق، والبوابة قيد التطوير المستمر',en:'Coaching has been ongoing since joining the team, and the portal is actively maintained'}],x:['Coaching','Portal']}
+];
+
+const esPhases=[
+ {e:'🧱',t:{ar:'التأسيس — أبريل 2026',en:'Establishment — April 2026'},p:{ar:'كتابة معايير الجودة ووصفها لأنواع التفاعل الرئيسية، بناء الفورم الأول لتسجيل التقييمات، وإنشاء لوحة Power BI المرتبطة به.',en:'Writing the quality criteria and descriptions for the main interaction types, building the first form to record evaluations, and creating the linked Power BI dashboard.'},s:['Google Forms','Power BI']},
+ {e:'🔁',t:{ar:'التحديث — أغسطس 2026',en:'Update — August 2026'},p:{ar:'إضافة قسم معايير كامل للمحادثات (Chat/Open CX)، وإضافة وصف ومثال عملي لكل معيار في جميع الأقسام، ومشاركتها مع القسم بأمثلة عملية واضحة.',en:'Adding a full Chat/Open CX criteria section, a description and practical example for every criterion, and sharing them with the department with clear, practical examples.'},s:['Chat','Examples']},
+ {e:'⚙️',t:{ar:'الفورم الثاني والسكربت — سبتمبر 2026',en:'Second form & script — September 2026'},p:{ar:'بناء الفورم الثاني بالكامل، والعمل على سكربت Google Apps Script مستوحى من لوحة Power BI الأولى، يعالج الاستجابات ويولّد العلامات واللوحات تلقائياً.',en:'Building the second form in full and a Google Apps Script inspired by the first Power BI dashboard, which processes responses and generates scores and dashboards automatically.'},s:['Apps Script','Sheets']}
+];
+
+const types=[
+ {k:{ar:'التفعيل',en:'Activation'},secs:[
+  {t:{ar:'الافتتاح',en:'Opening'},w:10,c:[[10,{ar:'التواصل الاحترافي والتخصيص',en:'Professional communication & personalization'},{ar:'تعريف واضح بالاسم والدور، مخاطبة العميل باسمه، التأكد من توفر وقته، وتوضيح سبب التواصل.',en:'Clear name and role, addressing the customer by name, checking availability, and clarifying the purpose.'}]]},
+  {t:{ar:'فهم العميل',en:'Customer understanding'},w:35,c:[[10,{ar:'التحضير والإدراك بالمرحلة',en:'Preparation & stage awareness'},{ar:'مراجعة بيانات العميل وسجل التواصل قبل المكالمة لتحديد مرحلته.',en:'Reviewing customer data and contact history before the call to identify the stage.'}],[10,{ar:'الإنصات الفعّال وفهم العميل',en:'Active listening & understanding'},{ar:'إعطاء العميل مساحة للتحدث، أسئلة توضيحية، وتجنّب المقاطعة والافتراضات.',en:'Giving the customer room to speak, clarifying questions, no interruptions or assumptions.'}],[15,{ar:'تحديد المعوقات',en:'Blocker identification'},{ar:'تحديد واضح للعقبات الفعلية التي تمنع التفعيل.',en:'Clearly identifying the actual obstacles preventing activation.'}]]},
+  {t:{ar:'التوجيه والإجراء',en:'Guidance & action'},w:35,c:[[10,{ar:'التوجيه والحل المناسب',en:'Relevant guidance & solution'},{ar:'حلول عملية مرتبطة بالعقبة مع التأكد من فهم العميل.',en:'Practical solutions tied to the obstacle, confirming understanding.'}],[15,{ar:'دفع التفعيل',en:'Activation push'},{ar:'دفع العميل نحو خطوة تفعيل فعلية خلال المكالمة.',en:'Pushing toward a concrete activation step during the call.'}],[10,{ar:'أول عملية / تقدّم ملموس',en:'First win / progress'},{ar:'ربط المكالمة بهدف أول عملية بيع وموعد الانطلاق.',en:'Linking the call to the first sale and the launch timeline.'}]]},
+  {t:{ar:'الالتزام التشغيلي',en:'Operational compliance'},w:20,c:[[10,{ar:'خطوات تالية وموعد متابعة',en:'Next steps & follow-up'},{ar:'إنهاء المكالمة بخطوات متفق عليها وموعد متابعة محدد.',en:'Ending with agreed steps and a specific follow-up date.'}],[5,{ar:'التنسيق الداخلي',en:'Internal coordination'},{ar:'التنسيق مع الأقسام الأخرى وإخبار العميل بالمتابعة.',en:'Coordinating with other teams and informing the customer.'}],[5,{ar:'جودة التوثيق في CRM',en:'CRM documentation'},{ar:'الـ Sentiment والملاحظات، الـ Substage والتاجات، وتوثيق التصعيد.',en:'Sentiment and notes, substage and tags, escalation documented.'}]]}]},
+ {k:{ar:'إعادة التفعيل',en:'Reactivation'},secs:[
+  {t:{ar:'الافتتاح',en:'Opening'},w:10,c:[[10,{ar:'التواصل الاحترافي والتخصيص',en:'Professional communication & personalization'},{ar:'تعريف بالاسم والدور، تحية مناسبة، والسؤال عن حاله وتوفر وقته.',en:'Name and role, an appropriate greeting, checking well-being and availability.'}]]},
+  {t:{ar:'فهم العميل',en:'Customer understanding'},w:40,c:[[20,{ar:'الإدراك بالمرحلة والوضع الحالي',en:'Stage & current situation'},{ar:'فهم سبب التوقف ومدة عدم الاستخدام قبل تقديم أي حل.',en:'Understanding why and how long usage stopped before offering a solution.'}],[20,{ar:'تحديد سبب التوقف والعقبة',en:'Churn reason & blocker'},{ar:'التمييز بين مشاكل تقنية أو تشغيلية أو متعلقة بالرضا.',en:'Distinguishing technical, operational or satisfaction issues.'}]]},
+  {t:{ar:'التوجيه والإجراء',en:'Guidance & action'},w:35,c:[[20,{ar:'دفع إعادة التفعيل',en:'Reactivation push'},{ar:'تذكير بالقيمة الفعلية وتقديم مساعدة محددة لتسهيل العودة.',en:'Reminding of real value and offering specific help to return.'}],[15,{ar:'خطة/حل مناسب للعودة',en:'Recovery plan'},{ar:'خطة تعالج سبب التوقف تحديداً مع خطوة فعلية للعودة.',en:'A plan for the specific churn cause with a concrete return step.'}]]},
+  {t:{ar:'الالتزام التشغيلي',en:'Operational compliance'},w:15,c:[[10,{ar:'خطوات تالية وموعد متابعة',en:'Next steps & follow-up'},{ar:'خطوات واضحة متفق عليها وموعد متابعة فعلي.',en:'Clear agreed steps and an actual follow-up date.'}],[5,{ar:'جودة التوثيق في CRM',en:'CRM documentation'},{ar:'توثيق فوري، تحديث الـ Substage، التاجات، والتصعيد.',en:'Immediate notes, substage, tags and escalation.'}]]}]},
+ {k:{ar:'التعامل مع الحالات',en:'Case Handling'},secs:[
+  {t:{ar:'الافتتاح',en:'Opening'},w:10,c:[[10,{ar:'التواصل الاحترافي والتخصيص',en:'Professional communication & personalization'},{ar:'تعريف بالاسم والدور، تحية مناسبة، وتوفر الوقت.',en:'Name and role, greeting, and availability.'}]]},
+  {t:{ar:'فهم الحالة',en:'Case understanding'},w:20,c:[[10,{ar:'التحضير وفهم الحالة',en:'Case preparation'},{ar:'مراجعة تفاصيل الحالة وسجلها قبل التواصل.',en:'Reviewing case details and history before contact.'}],[10,{ar:'الإنصات الفعّال',en:'Active listening'},{ar:'الاستماع الكامل لشرح المشكلة دون مقاطعة.',en:'Listening fully without interrupting.'}]]},
+  {t:{ar:'التوجيه والإجراء',en:'Guidance & action'},w:45,c:[[20,{ar:'تشخيص المشكلة والسبب الجذري',en:'Diagnosis & root cause'},{ar:'ربط الطلب بمرحلة الحساب وتشخيص دقيق للسبب.',en:'Linking the request to the account stage and diagnosing the cause.'}],[15,{ar:'الحل الصحيح والمناسب',en:'Correct resolution'},{ar:'حل صحيح بخطوات واضحة ودقيقة.',en:'A correct solution with clear, accurate steps.'}],[10,{ar:'تحمّل المسؤولية ومتابعة الحالة',en:'Ownership & case management'},{ar:'متابعة الحالة حتى إغلاقها والتنسيق الداخلي.',en:'Owning the case until closure, coordinating internally.'}]]},
+  {t:{ar:'الالتزام التشغيلي',en:'Operational compliance'},w:25,c:[[10,{ar:'خطوات تالية وضبط التوقعات',en:'Next steps & expectations'},{ar:'توضيح الخطوات والمدة المتوقعة للحل.',en:'Clarifying next steps and expected timeframe.'}],[5,{ar:'جودة التوثيق في CRM',en:'CRM documentation'},{ar:'تحديث حالة الكيس والـ Substage والتاجات والتصعيد.',en:'Updating case status, substage, tags and escalation.'}],[10,{ar:'الالتزام بحالة الكيس/التصعيد',en:'Case status / escalation'},{ar:'التعامل الفوري مع الكيسات الجديدة، الإغلاق بعد 3 محاولات غير مجدية مع التوثيق، والتصعيد عند الحاجة.',en:'Acting on new cases immediately, closing after 3 unanswered attempts with documentation, escalating when needed.'}]]}]},
+ {k:{ar:'المحادثات',en:'Chat & Open CX'},secs:[
+  {t:{ar:'معايير المحادثات',en:'Chat criteria'},w:100,c:[[20,{ar:'أول رد واضح ومرتبط',en:'Clear & relevant first response'},{ar:'رد مرتبط بطلب العميل مباشرة، دون ردود عامة.',en:'Directly addressing the request, no generic replies.'}],[15,{ar:'الرد ضمن الوقت المحدد',en:'Response within time limit'},{ar:'الرد الأول خلال 90 دقيقة كحد أقصى.',en:'First reply within 90 minutes at most.'}],[15,{ar:'التوجيه الصحيح للمحادثة',en:'Correct chat routing'},{ar:'تحويل المحادثة للفريق المختص، دون تحويلات خاطئة.',en:'Routing to the right team, no wrong transfers.'}],[15,{ar:'ملاحظة داخلية واضحة',en:'Clear internal note'},{ar:'تعليق داخلي يلخّص المحادثة والإجراء المطلوب.',en:'An internal note summarizing the chat and required action.'}],[15,{ar:'إغلاق صحيح للمحادثة',en:'Proper closure'},{ar:'إبقاء المحادثات الحية مفتوحة وإغلاقها بملاحظات واضحة أو توجيهها عند الحاجة.',en:'Keeping live chats open and closing with clear notes or routing when needed.'}],[20,{ar:'حل المشكلة والمتابعة',en:'Resolved & follow-up'},{ar:'حل المشكلة أو إجابة واضحة والوفاء بالمتابعة.',en:'Resolution or a clear answer, with follow-up honoured.'}]]}]}
+];
+const ce=[
+ [{ar:'معلومة غير دقيقة',en:'Incorrect information'},{ar:'معلومة غير دقيقة عن المنتج/السعر/السياسة دون تحقق.',en:'Unverified, inaccurate product/price/policy information.'}],
+ [{ar:'سلوك غير مهني',en:'Unprofessional behavior'},{ar:'نبرة أو ألفاظ غير لائقة أو عدم احترام العميل.',en:'Inappropriate tone or language, or disrespect.'}],
+ [{ar:'تأخر التعامل مع حالة عاجلة',en:'Delayed urgent case'},{ar:'عدم التحرك الفوري مع كيس جديد/عاجل.',en:'Not acting immediately on a new/urgent case.'}],
+ [{ar:'تأخر متابعة التفعيل/إعادة التفعيل',en:'Delayed (re)activation follow-up'},{ar:'عدم المتابعة خلال الإطار الزمني المعتمد.',en:'No follow-up within the approved timeframe.'}]];
+const bonus=[
+ ['+5',{ar:'استباقية رصد حاجة/خطر العميل',en:'Proactive risk/need identification'},{ar:'رصد مؤشر خطر أو فرصة ومعالجتها استباقياً.',en:'Spotting a risk or opportunity and acting proactively.'}],
+ ['+5',{ar:'أول عملية / نتيجة ملموسة',en:'First win / measurable outcome'},{ar:'نتيجة قابلة للقياس خلال التفاعل.',en:'A measurable result during the interaction.'}],
+ ['+3',{ar:'متابعة استباقية تتجاوز المطلوب',en:'Proactive follow-up beyond requirement'},{ar:'مبادرة تتجاوز الحد الأدنى.',en:'Going beyond the minimum.'}],
+ ['+2',{ar:'فرصة تحسين استخدام العميل',en:'Usage improvement opportunity'},{ar:'مشاركة ميزة غير مستخدمة بشكل عملي.',en:'Sharing an underused feature practically.'}]];
+const upd=[
+ {t:{ar:'قسم المحادثات الكامل',en:'Full Chat section'},p:{ar:'ستة معايير جديدة لقناة Chat/Open CX مجموعها 100 نقطة',en:'Six new Chat/Open CX criteria totalling 100 points'}},
+ {t:{ar:'وصف ومثال لكل معيار',en:'Description & example'},p:{ar:'وصف تفصيلي ومثال عملي لكل معيار في جميع الأقسام',en:'A detailed description and practical example for every criterion'}},
+ {t:{ar:'مشاركة المعايير مع القسم ونشرها',en:'Shared with the department & published'},p:{ar:'مشاركتها مع القسم بأمثلة عملية واضحة، ونشرها على صفحة تفاعلية مرجعية',en:'Shared with the department with clear, practical examples, and published on an interactive reference page'}}];
+const groups=[['Activation','10','100'],['Reactivation','7','100'],['Case Handling','9','100'],['Chat','6','100'],['Critical Errors','4',{ar:'وزن 0 — أي «Yes» يصفّر القسم والبونص',en:'0 weight — any "Yes" zeroes section & bonus'}],['Bonus','4',{ar:'حتى 15 (5+5+3+2)',en:'Up to 15 (5+5+3+2)'}]];
+const scriptSteps=[
+ {e:'🧭',t:{ar:'قائمة مخصصة وإعداد أول',en:'Custom menu & one-time setup'},p:{ar:'قائمة «أدوات الجودة»: إعداد أول يضيف أعمدة العلامة والبونص وينسّق ويجمّد، و«تحديث كل البيانات الآن».',en:'A "QA Tools" menu: one-time setup adds score and bonus columns, formats and freezes; plus "Refresh all data now".'}},
+ {e:'⚡',t:{ar:'تحديث تلقائي عند كل استجابة',en:'Auto refresh on every response'},p:{ar:'تريغر onFormSubmit يستدعي refreshAll فوراً ويعيد بناء كل الأوراق دون خطوة يدوية.',en:'An onFormSubmit trigger calls refreshAll instantly, rebuilding every sheet with no manual step.'}},
+ {e:'🧮',t:{ar:'حساب العلامة ومنطق التصفير',en:'Scoring & zero-out logic'},p:{ar:'علامة القسم = أوزان «Yes» ÷ أوزان المعايير المُجابة بـ Yes أو No؛ وأي خطأ حرج يصفّر العلامة والبونص.',en:'Section score = "Yes" weights ÷ weights answered Yes or No; any critical error zeroes score and bonus.'}},
+ {e:'🗂️',t:{ar:'أوراق لكل نوع تفاعل',en:'Sheets per interaction type'},p:{ar:'صيغة QUERY تسحب استجابات كل نوع، برأس ملوّن بأربع مجموعات.',en:'A QUERY formula pulls each type\'s responses, with a header in four colour groups.'}},
+ {e:'📊',t:{ar:'لوحة أداء وورقة لكل موظف',en:'Dashboard & per-agent sheet'},p:{ar:'بطاقات KPI وترتيب ومخططات، وورقة لكل موظف بأضعف وأقوى 5 معايير ومسار الأداء وسجل الأخطاء الحرجة.',en:'KPI cards, leaderboard and charts, plus a per-agent sheet with weakest/strongest 5 criteria, a trend line and a critical-error log.'}}];
+const forms={ar:['نموذج المراجعة الأساسي','فورم الحالات','فورم التفعيل','فورم Retention','QBR','مراجعة CSM العامة'],en:['Main Review Form','Cases Form','Activation Form','Retention Form','QBR','General CSM Review']};
+
+const coOverview=[
+ {e:'♾️',t:{ar:'عملية مستمرة',en:'A continuous practice'},p:{ar:'التدريب والمتابعة عملية مستمرة مع موظفي فريق نجاح العملاء منذ الانضمام للفريق، وليست نشاطاً لمرة واحدة.',en:'Coaching has been a continuous practice with the CSM team since joining — not a one-time activity.'}},
+ {e:'📈',t:{ar:'مبنية على تحليل الأداء',en:'Built on performance analysis'},p:{ar:'كل جلسة تُبنى على تحليل أداء فعلي للموظف (نتائج مراجعات الجودة)، وليست جلسة عامة أو عشوائية التوقيت.',en:'Every session is built on actual performance analysis (QA review results), never generic or randomly timed.'}},
+ {e:'🗒️',t:{ar:'موثّقة بنموذج موحّد',en:'Documented in one form'},p:{ar:'تقرير كل جلسة موثّق ومحفوظ في نموذج تدريب موحّد، معتمد ومستخدم حتى الآن.',en:'Each session report is saved in a standardized coaching form, approved and still in use.'}}];
+const coCadence=[
+ {e:'1️⃣',t:{ar:'جلسة إلى جلستين أسبوعياً',en:'One to two sessions per week'},p:{ar:'آلية متابعة معتمدة من موظف إلى اثنين أسبوعياً لجلسات التدريب.',en:'An adopted mechanism of one to two agents per week for coaching sessions.'}},
+ {e:'🎯',t:{ar:'محكومة بتحليل الأداء',en:'Driven by performance analysis'},p:{ar:'عدد الجلسات واختيار الموظف يتحددان حسب تحليل أداء كل موظف، لا بجدول ثابت للجميع.',en:'Session count and agent selection follow each agent\'s analysis, not one fixed schedule for all.'}}];
+const coReport=[
+ {e:'✅',t:{ar:'نموذج التقرير الموحّد',en:'Standardized report'},p:{ar:'فورم تدريب واحد لكل الموظفين، معتمد ومستخدم حالياً في كل جلسة.',en:'One coaching form for all agents, approved and used in every session.'},s:['Approved','In use']},
+ {e:'📁',t:{ar:'المجلد التأسيسي',en:'Foundational folder'},p:{ar:'الفورم وجلسات التدريب الموثّقة في المرحلة الأولى.',en:'The form and the documented sessions from the first stage.'},s:['Google Drive']},
+ {e:'📂',t:{ar:'المجلد الحالي',en:'Current folder'},p:{ar:'استمرارية الجلسات في المرحلة الحالية.',en:'The ongoing continuation of sessions.'},s:['Google Drive']}];
+
+const trRings=[
+ {n:6,pct:100,t:{ar:'متدربات',en:'Trainees'},s:{ar:'بتواريخ التحاق مختلفة',en:'Each joining on a different date'}},
+ {n:4,pct:67,t:{ar:'أنهين التدريب',en:'Completed training'},s:{ar:'خلال يومين إلى ثلاثة أيام',en:'Within two to three days'}},
+ {n:2,pct:33,t:{ar:'باشرتا العمل الفعلي',en:'In active operations'},s:{ar:'من اللواتي أنهين التدريب',en:'Of those who completed'}},
+ {n:2,pct:33,t:{ar:'انتقلتا للمبيعات',en:'Moved to Sales'},s:{ar:'بعد يومين من التدريب',en:'After two training days'}},
+ {n:22,pct:100,t:{ar:'مصدراً معرفياً',en:'Knowledge resources'},s:{ar:'مبنية على البوابة',en:'Built for the portal'}}];
+const days=[
+ {d:{ar:'اليوم 1',en:'Day 1'},t:{ar:'رِواء ودور موظف نجاح العملاء',en:'Rewaa & the CSM role'},p:{ar:'التدريب التعريفي، دور الموظف، رحلة العميل، جولة البوابة، الالتزام بالجدول، مهارات التواصل.',en:'Onboarding deck, CSM role, customer journey, portal tour, schedule compliance, communication skills.'}},
+ {d:{ar:'اليوم 2',en:'Day 2'},t:{ar:'التفعيل من الاستلام حتى التشغيل',en:'Activation journey'},p:{ar:'مراحل التفعيل، أتمتة الإعداد، رفع المنتجات، قنوات التدريب، الأجهزة.',en:'Activation stages, onboarding automation, product upload, training channels, devices.'}},
+ {d:{ar:'اليوم 3',en:'Day 3'},t:{ar:'أدوات العمل اليومية والتوثيق',en:'Daily tools & documentation'},p:{ar:'CRM، Metabase، Admin Panel، التوثيق، Maqsam و3CX، التاج، المكالمة، Open CX.',en:'CRM, Metabase, Admin Panel, documentation, Maqsam & 3CX, tags, call checklist, Open CX.'}},
+ {d:{ar:'اليوم 4',en:'Day 4'},t:{ar:'الخدمات المالية وبرامج الدعم',en:'Payments & support programs'},p:{ar:'رِواء باي، فاتورة الاشتراك، الباقات، Grubtech، دعم الفوترة ومنشآت، الكاش باك، Frill.',en:'RewaaPay, subscription invoice, packages, Grubtech, ZATCA & Monsha\'at support, cashback, Frill.'}},
+ {d:{ar:'اليوم 5',en:'Day 5'},t:{ar:'إعادة التفعيل والحالات والجودة',en:'Reactivation, cases & quality'},p:{ar:'Health Score، إعادة التفعيل، إدارة الحالات، معايير الجودة، اختبار ختامي شامل.',en:'Health Score, reactivation, case management, quality criteria, final quiz.'}}];
+const sched=[
+ ['09:00',{ar:'اختبار (من اليوم الثاني)',en:'Quiz (from Day 2)'}],['09:30',{ar:'الجلسة الأولى',en:'Session 1'}],['11:00',{ar:'استراحة + مراجعة + تاسكات',en:'Break, review & tasks'}],
+ ['13:30',{ar:'الجلسة الثانية',en:'Session 2'}],['15:00',{ar:'استراحة',en:'Break'}],['16:00',{ar:'تاسكات + الويبينار',en:'Tasks + webinar'}],['17:00',{ar:'الجلسة الختامية والشفهي',en:'Closing & oral check'}]];
+const trainees=[
+ ['Rama Al-Hadidi',{ar:'2 سبتمبر',en:'2 Sep'},3,{ar:'انتقلت للعمل الفعلي',en:'Active operations'}],
+ ['Rawan Alassar',{ar:'6 سبتمبر',en:'6 Sep'},2,{ar:'انتقلت للمبيعات',en:'Moved to Sales'}],
+ ['Dareen Taifour',{ar:'9 سبتمبر',en:'9 Sep'},2,{ar:'انتقلت للمبيعات',en:'Moved to Sales'}],
+ ['Maisaa Alqawaqneh',{ar:'17 سبتمبر',en:'17 Sep'},3,{ar:'انتقلت للعمل الفعلي',en:'Active operations'}],
+ ['Mona Aljarrah',{ar:'29 سبتمبر',en:'29 Sep'},3,{ar:'أنهت التدريب',en:'Training completed'}],
+ ['Rama Ahmed',{ar:'30 سبتمبر',en:'30 Sep'},2,{ar:'أنهت التدريب',en:'Training completed'}]];
+const obs=[
+ {e:'📱',t:{ar:'الهاتف المحمول في اليوم الأول',en:'Mobile phones on Day 1'},p:{ar:'حضور جلسات اليوم الأول عبر الهاتف لعدم تسليم لابتوبات العمل الرسمية.',en:'Day 1 sessions attended on phones because official laptops weren\'t issued.'}},
+ {e:'🔄',t:{ar:'الانشغال بتسليم العمل السابق',en:'Prior-role handover'},p:{ar:'انشغال متدربتين بإجراءات تسليم مهامهما السابقة خلال اليوم الأول.',en:'Two trainees were busy with handover from previous roles on Day 1.'}},
+ {e:'💻',t:{ar:'أجهزة مؤقتة في اليوم الثاني',en:'Temporary devices on Day 2'},p:{ar:'استخدام أجهزة مستعارة وليست الأجهزة الرسمية.',en:'Borrowed laptops instead of official devices.'}},
+ {e:'🔐',t:{ar:'إنشاء الحسابات وتفعيلها',en:'Account creation & activation'},p:{ar:'تفعيل الحسابات خلال اليوم الأول أو الثاني، وحالة واحدة لم تكتمل حتى اليوم الثالث.',en:'Accounts activated on Day 1 or 2; one case not complete until Day 3.'}},
+ {e:'⚠️',t:{ar:'لابتوب شخصي غير مستقر',en:'Unstable personal laptop'},p:{ar:'مشكلات وتوقف متكرر أثّر على سير التدريب.',en:'Repeated freezes that affected the training.'}},
+ {e:'📵',t:{ar:'الهاتف حلاً مؤقتاً',en:'Phone as a stopgap'},p:{ar:'متابعة يومي التدريب عبر الهاتف لعدم توفر جهاز، مما يحدّ من الاستفادة الكاملة.',en:'Both days followed on a phone for lack of a device, limiting the full benefit.'}}];
+const rules=[{ar:'التفرغ التام للتدريب: دون أي ارتباطات تسليم سابقة في اليوم الأول',en:'Full availability: no prior handover commitments on Day 1'},
+ {ar:'التسليم المسبق للأجهزة: لابتوب العمل الرسمي المجهّز قبل اليوم الأول',en:'Devices in advance: the configured work laptop before Day 1'},
+ {ar:'التجهيز المسبق للحسابات: كل الحسابات والأنظمة مفعّلة قبل اليوم الأول',en:'Accounts in advance: all accounts and systems active before Day 1'}];
+const deliv=[{ar:'منصة تفاعلية للبرنامج بخمسة أيام وهيكل يومي ثابت، منشورة على GitHub Pages',en:'An interactive five-day program platform with a fixed daily structure, on GitHub Pages'},
+ {ar:'توزيع المواضيع حسب ترابطها، وربط كل موضوع بمصدره في البوابة ومساره داخلها',en:'Topics ordered by dependency, each linked to its portal resource and path'},
+ {ar:'تاسكات تطبيقية يومية، منها تحليل مكالمات فعلية (المرحلة، السبب، السينتمنت، التاجات)',en:'Daily hands-on tasks, including real-call analysis (stage, reason, sentiment, tags)'},
+ {ar:'اختبار صباحي، أسئلة شفهية ختامية، وبنك أسئلة متعددة الخيارات لكل موضوع',en:'Morning quizzes, closing oral questions, and an MCQ bank per topic'},
+ {ar:'جدول زمني يومي لكل متدربة، وتقرير فردي لكل متدربة في مجلد التقارير',en:'A daily per-trainee timeline and an individual report per trainee in the Reports folder'}];
+
+const knCounters=[{n:5,ar:'أقسام رئيسية',en:'Core sections'},{n:50,suf:'+',ar:'رابط ومصدر موحّد',en:'Unified resources'},{n:2,ar:'فئتان مستفيدتان',en:'Audiences served'},{n:64,ar:'حالة SOP موثّقة',en:'SOP cases documented'}];
+const knPS=[
+ {e:'🧩',t:{ar:'المشكلة',en:'The problem'},p:{ar:'المعرفة التشغيلية كانت موزّعة بين عشرات الروابط والمستندات — أدلة بصيغ مختلفة، قنوات Slack متفرقة، جداول، وملفات Drive — ما صعّب الوصول السريع للمعلومة، خصوصاً على الموظف الجديد.',en:'Operational knowledge was scattered across dozens of links and documents — guides in different formats, scattered Slack channels, spreadsheets and Drive files — making information hard to find, especially for new hires.'}},
+ {e:'💡',t:{ar:'الحل',en:'The solution'},p:{ar:'بناء بوابة نجاح العملاء من الصفر: مرجع موحّد واحد بواجهة عربية سهلة التصفح، بخمسة أقسام، يضم نحو 50 رابطاً ومصدراً ويُحدَّث باستمرار.',en:'Building the CSM Portal from scratch: one unified reference with an easy Arabic interface, five sections, close to 50 resources, continuously updated.'}}];
+const knSections=[
+ {e:'1️⃣',t:{ar:'الدور والالتزامات',en:'Role & commitments'},p:{ar:'تعريف دور الموظف ومعايير الالتزام الأساسية في كل تواصل.',en:'The employee\'s role and core compliance standards for every interaction.'}},
+ {e:'2️⃣',t:{ar:'رحلة العميل',en:'Customer journey'},p:{ar:'عرض بصري لمراحل الرحلة (التفعيل ← تبنّي المنتج) وموقع كل نوع تواصل.',en:'A visual of the journey stages (Activation → Adoption) and where each interaction fits.'}},
+ {e:'3️⃣',t:{ar:'المصادر المعرفية',en:'Knowledge resources'},p:{ar:'الأدلة التشغيلية لكل مرحلة من التفعيل حتى إعادة التفعيل، وبرامج الدعم والحوافز.',en:'Operational guides from activation to reactivation, plus support and incentive programs.'}},
+ {e:'4️⃣',t:{ar:'البرامج والأدوات',en:'Programs & tools'},p:{ar:'الأنظمة اليومية — CRM، Metabase، Maqsam، Open CX، وغيرها.',en:'Daily systems — CRM, Metabase, Maqsam, Open CX and more.'}},
+ {e:'5️⃣',t:{ar:'تعليمات الالتزام والجودة',en:'Compliance & quality'},p:{ar:'السياسات والمعايير التي تضمن جودة التعامل مع العميل.',en:'Policies and standards ensuring quality in every interaction.'}}];
+const G=RP;
+const knGroups=[
+ {h:{ar:'الدور والالتزامات',en:'Role & commitments'},i:'🧑‍💼',items:[['CSM-Role','دور موظف نجاح العملاء','CSM Role'],['calendar','الجدول اليومي والتحديثات','Daily Schedule & Updates'],['documentation','الالتزام بالتوثيق','Documentation Compliance'],['Tagging','الالتزام بالتاج','Tagging Compliance'],['-CSM-Call-Checklist','الالتزام بالمكالمة','Call Compliance'],['chat','الرد والتعامل مع المحادثات','Chat Handling'],['CaseFollow','الالتزام بإدارة الحالات','Case Management Compliance']]},
+ {h:{ar:'المصادر المعرفية — حسب رحلة العميل',en:'Knowledge resources — by customer journey'},i:'🚀',items:[['CSM_Stages','مراحل التفعيل','Activation'],['Onboarding-Automation','رحلة أتمتة الإعداد','Onboarding Automation'],['Product','رفع المنتجات','Product Upload'],['Training','التدريب','Training'],['RewaaPay','رِواء باي','RewaaPay'],['Invoice','فاتورة الاشتراك','Subscription Invoice'],['Grubtech_CSM_Guide','دليل عملاء Grubtech','Grubtech CSM Guide'],['Reactivation','إعادة التفعيل','Reactivation'],['CasesV2','دليل إدارة الحالات','Cases'],['monshaat','حالات عملاء منشآت','Monsha\'at Cases'],['Zatca','دعم الفوترة الإلكترونية','E-Invoicing Support'],['Cashback','كاش باك من رِواء','Rewaa Cashback']]},
+ {h:{ar:'الالتزام والجودة',en:'Compliance & quality'},i:'✅',items:[['CSM_Quality_Criteria_Interactive','معايير جودة التعامل مع العملاء','CSM Quality Criteria'],['Tag','دليل التاج','Tag Guide'],['CSM-PORTAL','بوابة نجاح العملاء','CSM Portal']]}];
+const sopFlow=[
+ {t:{ar:'12 يوليو',en:'Jul 12'},p:{ar:'بدء إعداد قائمة الحالات (64 حالة)',en:'Started drafting the case list (64 cases)'}},
+ {t:{ar:'14 يوليو',en:'Jul 14'},p:{ar:'اعتماد القائمة وصلاحية الداشبورد لبدء الكتابة',en:'List approved; dashboard access granted to start writing'}},
+ {t:{ar:'15 يوليو',en:'Jul 15'},p:{ar:'بدء كتابة إجراءات SOP',en:'Started writing the SOP'}},
+ {t:{ar:'4 أغسطس',en:'Aug 4'},p:{ar:'اكتمال الكتابة لكل الحالات الـ64',en:'Writing completed for all 64 cases'}}];
+const knImpact=[
+ {e:'⏱️',t:{ar:'للموظف الحالي',en:'For current employees'},p:{ar:'إيجاد أي معلومة خلال ثوانٍ بدل البحث بين محادثات Slack أو سؤال الزملاء.',en:'Finding any information in seconds instead of searching Slack or asking colleagues.'}},
+ {e:'🌱',t:{ar:'للموظف الجديد',en:'For new hires'},p:{ar:'مرجع تأهيلي شامل منذ اليوم الأول يغني عن سؤال الزملاء عن كل تفصيل.',en:'A complete onboarding reference from day one, no need to ask about every detail.'}}];
+
+const auTimeline=[
+ {d:{ar:'مايو 2025',en:'May 2025'},t:{ar:'الفكرة والمقترح',en:'The idea & proposal'},b:[{ar:'اقتراح الفكرة وإعداد المقترح الكامل وتقديمه للإدارة في 26 مايو 2025',en:'Proposed the idea and submitted the full proposal to management on 26 May 2025'}],x:['Proposal']},
+ {d:{ar:'تجريبي',en:'Trial'},t:{ar:'التنفيذ التجريبي',en:'Trial implementation'},b:[{ar:'تطبيق الفكرة على حساب n8n تجريبي شخصي لإثبات الجدوى',en:'Implemented on a personal trial n8n account to prove the concept'}],x:['n8n']},
+ {d:{ar:'حديثاً',en:'Recently'},t:{ar:'الاعتماد الرسمي',en:'Official rollout'},b:[{ar:'إعادة اقتراحها وتنفيذها فعلياً بعد الحصول على حساب n8n رسمي',en:'Re-proposed and implemented for real after getting an official n8n account'}],x:['Official']},
+ {d:{ar:'حالياً',en:'Ongoing'},t:{ar:'البناء الكامل',en:'Full build'},b:[{ar:'بناء الـ Workflow بالكامل لفريقي الدعم الفني ونجاح العملاء، وتصميم الشكل الاحترافي للرسالة',en:'Built the full workflow for Technical Support and Customer Success, and designed the professional message format'}],x:['Technical Support','Customer Success']}];
+const sandParts=[
+ {e:'👋',t:{ar:'01 · التحية',en:'01 · Greeting'},p:{ar:'جملة افتتاحية تخاطب الموظف باسمه، لتأكيد أن الرسالة موجهة له شخصياً.',en:'An opening line addressing the employee by name, confirming it\'s personal.'},q:{ar:'«مرحباً فاطمة 👋»',en:'"Hi Fatma 👋"'}},
+ {e:'🌟',t:{ar:'02 · المقدمة',en:'02 · Introduction'},p:{ar:'رقم الأسبوع والفترة + جملة إيجابية محددة عن نقطة قوة فعلية، حتى يستقبل الموظف ما بعدها بانفتاح.',en:'Week number and period + a specific positive line about a real strength, so what follows lands openly.'},q:{ar:'«تقرير مراجعاتك للأسبوع رقم 36… لاحظنا التزامك الواضح بمعيار (دفع العميل نحو التفعيل)»',en:'"Your review report for week 36… We noticed your clear commitment to driving customer activation"'}},
+ {e:'📊',t:{ar:'03 · العرض',en:'03 · Body'},p:{ar:'الأرقام الموضوعية (المكالمات، المتوسط، الأخطاء الحرجة، البونص) + أبرز نقاط القوة + نقطة أو نقطتا تحسين فقط.',en:'Objective numbers (calls, average, critical errors, bonus) + top strengths + only one or two focus points.'},q:{ar:'«عدد المكالمات: 2 | متوسط العلامة: 72% | أخطاء حرجة: 0»',en:'"Calls: 2 | Average score: 72% | Critical errors: 0"'}},
+ {e:'💪',t:{ar:'04 · الخاتمة',en:'04 · Closing'},p:{ar:'جملة تشجيعية + رابط لتفاصيل كل المراجعات، حتى لا تنتهي الرسالة عند نقطة الضعف.',en:'An encouraging line + a link to all review details, so the message never ends on the weak point.'},q:{ar:'«بشكل عام، انت/ي على المسار الصح… [عرض تفاصيل مراجعات الأسبوع]»',en:'"Overall, you\'re on the right track… [View this week\'s review details]"'}}];
+const auExtra=[
+ {e:'📬',t:{ar:'مثال فعلي من البريد المرسل',en:'A real sent example'},p:{ar:'تقرير مراجعات الأسبوع 39 (20–26 سبتمبر)، أُرسل تلقائياً يوم الأحد 27 سبتمبر الساعة 9:00 صباحاً.',en:'The week-39 review report (Sep 20–26), sent automatically on Sunday Sep 27 at 9:00 AM.'},s:['Sunday 9:00 AM']},
+ {e:'📒',t:{ar:'ملف المتابعة الأسبوعي',en:'Weekly tracking file'},p:{ar:'الرابط داخل الرسالة مرتبط بملف خاص بالموظف يُضاف له شيت لكل أسبوع تمت مراجعته — للشفافية والبناء على الملاحظات.',en:'The link opens the employee\'s own file, with a new sheet for each reviewed week — for transparency and building on feedback.'},s:['Per employee','Weekly sheet']}];
+
+const ktCounters=[{n:2,ar:'اجتماعا مشاركة معرفة',en:'Knowledge-sharing meetings'},{n:2,ar:'جلستا مرافقة عملية',en:'Shadowing sessions'},{n:100,suf:'%',ar:'صلاحيات وصول كاملة للجميع',en:'Full access for everyone'},{n:4,ar:'أدوات مسلّمة جاهزة',en:'Tools handed over ready'}];
+const ktScope=[{ar:'مشاركة كافة المصادر المعرفية والأدوات',en:'Shared all knowledge resources and tools'},{ar:'مشاركة المعرفة من خلال اجتماعين',en:'Knowledge sharing through two meetings'},{ar:'المرافقة العملية (Shadowing) من خلال جلستين',en:'Practical shadowing through two sessions'},{ar:'شرح بوابة نجاح العملاء ومصادرها كاملة، قسماً قسماً',en:'A full CSM Portal walkthrough, section by section'},{ar:'مشاركة رابط البوابة ومنح صلاحيات كاملة للجميع',en:'Shared the portal link with full access for everyone'},{ar:'تسليم نموذج التقييم جاهزاً ومضافاً فيه جميع الموظفين، مع ملف الردود',en:'Handed over the evaluation form with all employees added, plus its responses sheet'},{ar:'تسليم الأتمتة الأسبوعية جاهزة ومختبرة',en:'Handed over the weekly automation, ready and tested'},{ar:'تسليم لوحات المتابعة على Zoho، ومنها لوحة اختيار عينات التقييم',en:'Handed over the Zoho dashboards, incl. evaluation sample selection'}];
+const ktTimeline=[
+ {d:{ar:'13 سبتمبر',en:'13 Sep'},t:{ar:'مشاركة المعرفة — الاجتماع الأول',en:'Knowledge sharing — Meeting 1'},b:[{ar:'الأحد 1:30 – 3:00 مساءً — CSM Overview 1',en:'Sunday 1:30 – 3:00 pm — CSM Overview 1'}],x:['Overview 1']},
+ {d:{ar:'14 سبتمبر',en:'14 Sep'},t:{ar:'مشاركة المعرفة — الاجتماع الثاني',en:'Knowledge sharing — Meeting 2'},b:[{ar:'الإثنين 3:00 مساءً — CSM Overview 2',en:'Monday 3:00 pm — CSM Overview 2'}],x:['Overview 2']},
+ {d:{ar:'29 سبتمبر',en:'29 Sep'},t:{ar:'المرافقة العملية — الجلسة الأولى',en:'Shadowing — Session 1'},b:[{ar:'الثلاثاء 3:00 – 4:00 مساءً — QA Shadowing',en:'Tuesday 3:00 – 4:00 pm — QA Shadowing'}],x:['Shadowing']},
+ {d:{ar:'30 سبتمبر',en:'30 Sep'},t:{ar:'المرافقة العملية — الجلسة الثانية',en:'Shadowing — Session 2'},b:[{ar:'الأربعاء 3:00 – 4:00 مساءً — QA Shadowing',en:'Wednesday 3:00 – 4:00 pm — QA Shadowing'}],x:['Shadowing']}];
+const m1=[{ar:'رحلة العميل: الاستلام من المبيعات، التفعيل، التبنّي، وإعادة التفعيل',en:'The journey: handover from Sales, activation, adoption, reactivation'},{ar:'مراحل التفعيل والمراحل الفرعية ومتى تُحدَّث',en:'Activation stages and sub-stages, and when to update them'},{ar:'أتمتة الإعداد في أول 7 أيام عبر واتساب وآلية إيقافها',en:'First-7-days onboarding automation via WhatsApp and how to stop it'},{ar:'العميل غير الجاهز أو المنتظر للأجهزة، والعمل بالتوازي',en:'Customers not ready or awaiting devices — working in parallel'},{ar:'توثيق التفاعلات والـ Sentiment عند وجود تغيير فعلي',en:'Documenting interactions and sentiment on actual change'},{ar:'الانتقال للتبنّي: أول فاتورة، نقطة البيع، والتوسع في الاستخدام',en:'Moving to adoption: first invoice, POS, wider usage'},{ar:'Zoho للمتابعة، Metabase لبيانات العميل، وآلية التصعيد',en:'Zoho for follow-up, Metabase for data, and escalation'}];
+const m2=[{ar:'إعادة التفعيل: التصنيف حسب مدة التوقف وآخر فاتورة',en:'Reactivation: segmenting by inactivity and last invoice'},{ar:'إدارة الحالات: السياق أولاً، تحديث الحالة والأسباب، والإغلاق الصحيح',en:'Cases: context first, update status and reasons, close correctly'},{ar:'حالات عملاء منشآت ومهام الأتمتة والتصعيد',en:'Monsha\'at cases, automation tasks and escalation'},{ar:'ملفات المنتجات والتكاملات (رواق وGrubtech)',en:'Product files and integrations (Rewaq & Grubtech)'},{ar:'منهجية مراجعة الجودة: النماذج، المحادثات، المكالمات، اللوحة',en:'Quality review method: forms, chats, calls, dashboard'},{ar:'المعايرة المشتركة: تقييم 2–3 عينات ومقارنة النتائج',en:'Joint calibration: scoring 2–3 samples and comparing'}];
+const ktTools=[
+ {e:'📝',t:{ar:'نموذج التقييم',en:'Evaluation form'},p:{ar:'جاهز ومضاف فيه جميع الموظفين.',en:'Ready, with all employees added.'},s:['Google Form']},
+ {e:'📄',t:{ar:'ملف الردود',en:'Responses sheet'},p:{ar:'ملف استجابات النموذج.',en:'The form\'s responses file.'},s:['Google Sheets']},
+ {e:'📨',t:{ar:'الأتمتة الأسبوعية',en:'Weekly automation'},p:{ar:'تصل أسبوعياً — جاهزة ومختبرة وتعمل بشكل سليم.',en:'Delivered weekly — ready, tested and working.'},s:['n8n']},
+ {e:'📊',t:{ar:'لوحات المتابعة على Zoho',en:'Zoho dashboards'},p:{ar:'ومنها لوحة اختيار عينات التقييم.',en:'Incl. the evaluation sample-selection dashboard.'},s:['Zoho CRM']}];
+
+/* ===== RENDER ===== */
+let L='ar',TYPE=0;
+const $=s=>document.querySelector(s);
+const tx=o=>o==null?'':(typeof o==='object'?o[L]:o);
+const cardHTML=(c,i)=>`<div class="card reveal up d${i%3+1}"><span class="emoji">${c.e}</span><h3>${tx(c.t)}</h3><p>${tx(c.p)}</p>${c.q?`<div class="quote">${tx(c.q)}</div>`:''}${c.s?`<div class="stack">${c.s.map(x=>`<span>${x}</span>`).join('')}</div>`:''}</div>`;
+const tl=a=>a.map((j,i)=>`<div class="tcard reveal ${i%2?'right':'left'}"><div class="t-top"><h3>${tx(j.t)}</h3><span class="date">${tx(j.d)}</span></div><ul class="dots">${j.b.map(x=>`<li>${tx(x)}</li>`).join('')}</ul><div class="badges">${j.x.map(x=>`<span class="badge">${x}</span>`).join('')}</div></div>`).join('');
+const flow=a=>a.map((s,i)=>`<div class="step reveal up d${i%3+1}"><h4>${tx(s.t)}</h4><p>${tx(s.p)}</p></div>`).join('');
+const cnt=a=>a.map((c,i)=>`<div class="counter reveal up d${i%3+1}"><div class="n" data-count="${c.n}" data-suffix="${c.suf||''}">0</div><p>${tx(c)}</p></div>`).join('');
+const dots=a=>a.map(x=>`<li>${tx(x)}</li>`).join('');
+
+function renderType(){
+  const ty=types[TYPE],pts=L==='ar'?'نقطة':'pts';
+  $('#typeTabs').innerHTML=types.map((t,i)=>`<button class="type-tab${i===TYPE?' active':''}" data-i="${i}">${tx(t.k)}</button>`).join('');
+  $('#typeBars').innerHTML=`<h4>${tx(ty.k)} — 100 ${pts}</h4>`+ty.secs.map(s=>`<div class="bar-item"><div class="bar-head"><span>${tx(s.t)}</span><b>${s.w} ${pts}</b></div><div class="bar"><div class="fill" data-w="${s.w}"></div></div></div>`).join('');
+  $('#typeCrit').innerHTML=ty.secs.map(s=>`<div class="crit-sec"><h4 style="font-size:15px;color:var(--cyan);margin-bottom:4px">${tx(s.t)} — ${s.w}</h4>${s.c.map(c=>`<div class="crit"><span class="w">${c[0]}</span><div><b>${tx(c[1])}</b><small>${tx(c[2])}</small></div></div>`).join('')}</div>`).join('');
+  document.querySelectorAll('.type-tab').forEach(b=>b.addEventListener('click',()=>{TYPE=+b.dataset.i;renderType();fillBars('#typeBars')}));
+}
+function fillBars(sel){$(sel).querySelectorAll('.fill').forEach((f,i)=>{f.classList.remove('done');f.style.width='0';setTimeout(()=>{f.style.width=f.dataset.w+'%';setTimeout(()=>f.classList.add('done'),1600)},60+i*110)})}
+
+function render(){
+  document.documentElement.lang=L;document.documentElement.dir=L==='ar'?'rtl':'ltr';
+  document.title=L==='ar'?'ملف إنجازات الجودة — نجاح العملاء | رِواء':'Quality Portfolio — Customer Success | Rewaa';
+  document.querySelectorAll('[data-t]').forEach(el=>{el.innerHTML=tx(T[el.dataset.t])});
+  $('#langBtn').textContent=L==='ar'?'EN':'عربي';
+  const m=marquee.map(([n,t])=>`<div class="marquee-item">${n} <em>${t}</em></div>`).join('');$('#marqueeTrack').innerHTML=m+m;
+  $('#counters').innerHTML=cnt(counters);
+  $('#journeyTimeline').innerHTML=tl(journey);
+  $('#esPhases').innerHTML=esPhases.map(cardHTML).join('');
+  renderType();
+  $('#ceCards').innerHTML=ce.map(c=>`<div class="ce-card"><b>${tx(c[0])}</b><small>${tx(c[1])}</small></div>`).join('');
+  $('#bonusCards').innerHTML=bonus.map(b=>`<div class="bonus"><span class="w">${b[0]}</span><b>${tx(b[1])}</b><small>${tx(b[2])}</small></div>`).join('');
+  $('#updFlow').innerHTML=flow(upd);
+  $('#groupsTbl').innerHTML=`<tr><th>${L==='ar'?'المجموعة':'Group'}</th><th>${L==='ar'?'عدد المعايير':'Criteria'}</th><th>${L==='ar'?'الحد الأقصى':'Max'}</th></tr>`+groups.map(r=>`<tr><td dir="ltr" style="text-align:start;color:var(--cyan);font-weight:700">${r[0]}</td><td>${r[1]}</td><td>${tx(r[2])}</td></tr>`).join('');
+  $('#scriptSteps').innerHTML=scriptSteps.map(c=>`<div class="ccard" style="cursor:auto"><div class="cicon">${c.e}</div><div><b style="font-weight:700">${tx(c.t)}</b><small style="font-size:13.5px;margin-top:2px">${tx(c.p)}</small></div></div>`).join('');
+  $('#formsChips').innerHTML=forms[L].map(f=>`<span class="chip">${f}</span>`).join('');
+  $('#coOverview').innerHTML=coOverview.map(cardHTML).join('');
+  $('#coCadence').innerHTML=coCadence.map(cardHTML).join('');
+  $('#coReport').innerHTML=coReport.map(cardHTML).join('');
+  const cols=['#ff3d9a','#22e3ff','#2dff9a','#ffb627','#5b4bff'];
+  $('#trRings').innerHTML=trRings.map((r,i)=>`<div class="ring-card"><div class="ring"><svg width="62" height="62"><circle class="bg" cx="31" cy="31" r="27"/><circle class="fg" cx="31" cy="31" r="27" stroke="${cols[i]}" data-pct="${r.pct}"/></svg><span>${r.n}</span></div><div><b>${tx(r.t)}</b><small>${tx(r.s)}</small></div></div>`).join('');
+  $('#days').innerHTML=days.map((d,i)=>`<div class="day reveal up d${i%3+1}"><div class="d">${tx(d.d)}</div><h4>${tx(d.t)}</h4><p>${tx(d.p)}</p></div>`).join('');
+  $('#sched').innerHTML=sched.map((s,i)=>`<div class="step reveal up d${i%3+1}"><h4 dir="ltr" style="text-align:start">${s[0]}</h4><p>${tx(s[1])}</p></div>`).join('');
+  $('#traineesTbl').innerHTML=`<tr><th>${L==='ar'?'المتدربة':'Trainee'}</th><th>${L==='ar'?'الالتحاق':'Joined'}</th><th>${L==='ar'?'أيام التدريب':'Training days'}</th><th>${L==='ar'?'الحالة':'Status'}</th></tr>`+trainees.map(r=>`<tr><td dir="ltr" style="text-align:start">${r[0]}</td><td>${tx(r[1])}</td><td>${r[2]}</td><td>${tx(r[3])}</td></tr>`).join('');
+  $('#obs').innerHTML=obs.map(cardHTML).join('');
+  $('#rules').innerHTML=dots(rules);$('#deliv').innerHTML=dots(deliv);
+  $('#knCounters').innerHTML=cnt(knCounters);
+  $('#knPS').innerHTML=knPS.map(cardHTML).join('');
+  $('#knSections').innerHTML=knSections.map(cardHTML).join('');
+  $('#knGroups').innerHTML=knGroups.map(g=>`<h3 class="sub-h reveal up"><i>${g.i}</i><span>${tx(g.h)}</span></h3><div class="grid4">${g.items.map((it,i)=>`<a class="card reveal up d${i%3+1}" href="${G}${it[0]}/" target="_blank" rel="noopener" style="cursor:none"><h3 style="font-size:15.5px">✦ ${L==='ar'?it[1]:it[2]}</h3><p style="font-size:12.5px" dir="ltr">fyousef-2023.github.io/${it[0]}</p></a>`).join('')}</div>`).join('');
+  $('#sopFlow').innerHTML=flow(sopFlow);
+  $('#knImpact').innerHTML=knImpact.map(cardHTML).join('');
+  $('#auTimeline').innerHTML=tl(auTimeline);
+  $('#sandParts').innerHTML=sandParts.map(cardHTML).join('');
+  $('#auExtra').innerHTML=auExtra.map(cardHTML).join('');
+  $('#ktCounters').innerHTML=cnt(ktCounters);
+  $('#ktScope').innerHTML=dots(ktScope);
+  $('#ktTimeline').innerHTML=tl(ktTimeline);
+  $('#m1').innerHTML=dots(m1);$('#m2').innerHTML=dots(m2);
+  $('#ktTools').innerHTML=ktTools.map(cardHTML).join('');
+  observeAll();
+}
+
+let io,barIO,countIO,ringIO;
+function observeAll(){
+  [io,barIO,countIO,ringIO].forEach(o=>o&&o.disconnect());
+  io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>{el.classList.remove('in');io.observe(el)});
+  barIO=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;fillBars('#'+e.target.id);barIO.unobserve(e.target)}),{threshold:.25});
+  barIO.observe($('#typeBars'));
+  countIO=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count,suf=el.dataset.suffix||'';let t0=null;
+    const st=ts=>{if(!t0)t0=ts;const k=Math.min((ts-t0)/1600,1);const v=Math.round(end*(1-Math.pow(1-k,3)));el.textContent=(suf==='+'?'+':'')+v+(suf==='%'?'%':'');if(k<1)requestAnimationFrame(st)};requestAnimationFrame(st);countIO.unobserve(el)}),{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>countIO.observe(el));
+  ringIO=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.querySelectorAll('.fg').forEach(c=>c.style.strokeDashoffset=170-170*(+c.dataset.pct/100));ringIO.unobserve(e.target)}),{threshold:.3});
+  ringIO.observe($('#trRings'));
+}
+
+render();
+$('#langBtn').addEventListener('click',()=>{L=L==='ar'?'en':'ar';render()});
+window.addEventListener('load',()=>setTimeout(()=>{$('#loader').classList.add('hide');$('#nav').classList.add('show')},2000));
+$('#burger').addEventListener('click',()=>$('#navLinks').classList.toggle('open'));
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'});$('#navLinks').classList.remove('open')});
+
+const dot=$('.cursor-dot'),ring=$('.cursor-ring');let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`});
+(function loop(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;requestAnimationFrame(loop)})();
+const HOV='a,button,.chip,.card,.tcard,.ccard,.step,.day';
+document.addEventListener('mouseover',e=>{if(e.target.closest(HOV))ring.classList.add('hover')});
+document.addEventListener('mouseout',e=>{if(e.target.closest(HOV))ring.classList.remove('hover')});
+
+const cv=$('#particles'),ctx=cv.getContext('2d'),colors=['#5b4bff','#ff3d9a','#22e3ff','#ffb627'];let W,H,pts=[];const dpr=devicePixelRatio||1;
+function size(){W=cv.width=innerWidth*dpr;H=cv.height=innerHeight*dpr;cv.style.width=innerWidth+'px';cv.style.height=innerHeight+'px';
+  const n=Math.min(110,Math.floor(innerWidth*innerHeight/14000));
+  pts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.45*dpr,vy:(Math.random()-.5)*.45*dpr,r:(Math.random()*1.8+.8)*dpr,c:colors[Math.random()*4|0]}))}
+size();addEventListener('resize',size);
+(function draw(){ctx.clearRect(0,0,W,H);const md=140*dpr,px=mx*dpr,py=my*dpr;
+  for(let i=0;i<pts.length;i++){const p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+    const dx=p.x-px,dy=p.y-py,dm=Math.hypot(dx,dy);if(dm<120*dpr&&dm>0){p.x+=dx/dm*.8;p.y+=dy/dm*.8}
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fillStyle=p.c;ctx.shadowBlur=10;ctx.shadowColor=p.c;ctx.fill();ctx.shadowBlur=0;
+    for(let j=i+1;j<pts.length;j++){const q=pts[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<md){const g=ctx.createLinearGradient(p.x,p.y,q.x,q.y);g.addColorStop(0,p.c);g.addColorStop(1,q.c);ctx.globalAlpha=(1-d/md)*.35;ctx.strokeStyle=g;ctx.lineWidth=.8*dpr;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke();ctx.globalAlpha=1}}}
+  requestAnimationFrame(draw)})();
+
+</script>
+</body>
+</html>
